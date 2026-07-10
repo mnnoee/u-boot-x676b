@@ -1,0 +1,2217 @@
+====> GZ (0)[   26.794881]Version of MTEE: mTEE_SDK: 2.2.2.004.S0MP1, Built: 16:05:09 Oct 17 2022
+
+Say Hello from EL2!
+
+MIDR: 412fd050, MPIDR: 81000000
+CPU Core: 0!
+GZ Platform: MTK_ARMV8
+Memory base: 0x846c00000, size: 0x1200000
+lk_init 0x3805c808-0x3805cbe0=984
+48600000 48600000 5920 11002000 in lk_main
+====> GZ (0)[    0.002368]Version of GZ-CORE: GZ_CORE_hypervisor: 3.2.0.050.S0MP1, Built: 16:05:06 Oct 17 2022
+====> GZ (0)[    0.003579]platform_init_mmu_mappings membase: 0x846c00000
+====> GZ (0)[    0.004392]platform_init_mmu_mappings memsize: 0x1200000
+====> GZ (0)[    0.005184]platform_init_mmu_mappings kernel offset: 0x38000000
+====> GZ (0)[    0.006051]platform_init_mmu_mappings ram phys: 0x87ec00000
+====> GZ (0)[    0.006876]platform_init_mmu_mappings ram size: 1200000
+====> GZ (0)[    0.007696]INIT: cpu 0, calling hook 0x38009254 (libvmm_early) at level 0x10000, flags 0x1
+
+welcome to lk/MP
+
+boot args 0x48600000 0x48600000 0x5920 0x11002000
+calling constructors
+initializing heap
+====> GZ (0)[    0.010064]INIT: cpu 0, calling hook 0x380400f8 (vm_preheap) at level 0x3ffff, flags 0x1
+====> GZ (0)[    0.011298]base 0x382fa000 size 8192 bytes, heap_grow_sz:8192
+====> GZ (0)[    0.012121]base 0x382fc000 size 4096 bytes, heap_grow_sz:4096
+initializing kernel
+====> GZ (0)[    0.013189]INIT: cpu 0, calling hook 0x3800b570 (plat_sip_smc_ver) at level 0x50000, flags 0x1
+====> GZ (0)[    0.014394]plat_sip_smc_version_init sip ver, major=0xffffffff, minor=0x0
+====> GZ (0)[    0.015369]plat_sip_smc_version_init sip smc remaked is supported!
+====> GZ (0)[    0.016269]INIT: cpu 0, calling hook 0x38040150 (vm) at level 0x50000, flags 0x1
+====> GZ (0)[    0.017326]INIT: cpu 0, calling hook 0x380093bc (libvmm) at level 0x50001, flags 0x1
+====> GZ (0)[    0.018427]get_parameter_from_atag:281 new boot tag version detected!
+====> GZ (0)[    0.019349][platform_set_boot_mode]:gz boot mode is 1 
+====> GZ (0)[    0.020124]platform_set_boot_info BOOT_TAG_IS_ABNORMAL_BOOT found=0x0!
+
+
+U-Boot 2025.10-rc5-ge578644c08f0-dirty (Jul 10 2026 - 00:46:11 +0300) mt6878-tetris
+
+Model: Infinix Note 12 Pro (X676B)
+DRAM:  common/malloc_simple.c:26-        alloc_simple() size=30, ptr=d18, limit=2000: 51084da8
+common/malloc_simple.c:26-        alloc_simple() size=60, ptr=d78, limit=2000: 51084dd8
+4 GiB (total 8 GiB)
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/lists.c:216-      lists_bind_fdt() bind node clock-32k
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'fixed-clock'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'fixed_clock' for 'fixed-clock'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node clock-13m
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'fixed-clock'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'fixed_clock' for 'fixed-clock'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node clock-26m
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'fixed-clock'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'fixed_clock' for 'fixed-clock'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node clock-ulposc
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'fixed-clock'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'fixed_clock' for 'fixed-clock'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpus
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'cpus' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpu-map
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'cpu-map' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node pmu-a55
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a55-pmu'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'pmu-a55'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node pmu-a78
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a76-pmu'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'pmu-a78'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node pmu-dsu
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,dsu-pmu'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'pmu-dsu'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node psci
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,psci-1.0'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'psci' for 'arm,psci-1.0'
+drivers/core/lists.c:163-device_bind_driver_to_node() Cannot find driver 'psci-sysreset'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node soc@0
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'simple-bus'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'simple_bus' for 'simple-bus'
+drivers/core/ofnode.c:639-ofnode_read_u32_array() ofnode_read_u32_array: ranges: bind node performance-controller@11bc00
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,cpufreq-hw'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'performance-controller@11bc00'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node interrupt-controller@c000000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,gic-v3'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'interrupt-controller@c000000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@10000000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-topckgen'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-topckgen'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@10001000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-infracfg_ao'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-infracfg_ao'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node reset-controller
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'ti,syscon-reset'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'ti-syscon-reset' for 'ti,syscon-reset'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@1000c000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-apmixedsys'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8187-apmixedsys'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@10003000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-pericfg-ao'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-pericfg-ao'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@11210000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-afe'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-afe'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@13fbf000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-mfg'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-mfg'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@14000000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-mmsys'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-mmsys'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@1101b000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-imp_iic_wrap_c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-imp_iic_wrap_c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@11e02000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-imp_iic_wrap_w'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-imp_iic_wrap_w'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@11eb4000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-imp_iic_wrap_en'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-imp_iic_wrap_en'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@11f01000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-imp_iic_wrap_n'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-imp_iic_wrap_n'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node pinctrl
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-pinctrl'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-pinctrl'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'pinctrl'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node serial@11002000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6577-uart'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'serial_mtk' for 'mediatek,mt6577-uart'
+drivers/core/device.c:95-  device_bind_common()    - seq=0
+drivers/core/lists.c:216-      lists_bind_fdt() bind node usb0@11200000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8518-musb'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mtk-musb'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'usb0@11200000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node t-phy@11f40000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,generic-tphy-v2'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'mtk-tphy' for 'mediatek,generic-tphy-v2'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node mmc@11240000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8183-mmc'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'mtk_sd' for 'mediatek,mt8183-mmc'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node ufshci@11270000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-ufshci'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'mediatek-ufshci' for 'mediatek,mt6789-ufshci'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11e00000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11e00000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11e01000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11e01000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11eb0000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11eb0000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11015000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11015000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11eb1000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11eb1000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11017000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11017000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@1101a000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@1101a000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11f00000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11f00000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11eb2000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11eb2000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11eb3000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11eb3000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node watchdog@10007000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-wdt'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6589-wdt'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'mtk_wdt' for 'mediatek,mt6589-wdt'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node timer
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,armv8-timer'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'timer'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node aliases
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'aliases' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node chosen
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'chosen' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node memory
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'memory' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node reserved-memory
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'reserved-memory' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node framebuffer@fe0d0000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'simple-framebuffer'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'simple_video' for 'simple-framebuffer'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node wifi@bf000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'wifi@bf000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node consys_emi@7d000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'consys_emi@7d000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node sspm_ap@9f560000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'sspm_ap@9f560000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node ap_md_c_smem@8c000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'ap_md_c_smem@8c000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node ap_md_nc_smem@8e000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'ap_md_nc_smem@8e000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node md_mem@e3200000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'md_mem@e3200000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node md_mem2@de800000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'md_mem2@de800000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node md_mem3@ddc00000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'md_mem3@ddc00000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node md_mem4@dc000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'md_mem4@dc000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node ccci_tag@bf9f0000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'ccci_tag@bf9f0000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node scp_share@8f000000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'shared-dma-pool'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'scp_share@8f000000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node scp@bfa00000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'scp@bfa00000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node dfdmcu_dump@fd000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'dfdmcu_dump@fd000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node crypto_hw@48401000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'crypto_hw@48401000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node tee@70000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'tee@70000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node tee_sec@7de00000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'tee_sec@7de00000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node mcupm@7feb0000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'mcupm@7feb0000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node sspm@9fe70000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'sspm@9fe70000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node bl31@48200000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'bl31@48200000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node framebuffer@fe0d0000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'framebuffer@fe0d0000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node aee_lk@50700000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'aee_lk@50700000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node pl_drambuf@48500000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'pl_drambuf@48500000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node unmap@7e800000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'unmap@7e800000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node gz@7ec00000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'gz@7ec00000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node emi_mbist@7ffff000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'emi_mbist@7ffff000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node dram-controller1@3ffff000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'dram-controller1@3ffff000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node dram-controller0@3ffff000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'dram-controller0@3ffff000' has no compatible string
+drivers/core/uclass.c:346-uclass_find_device_by_seq() 0
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'serial@11002000'
+drivers/core/uclass.c:357-uclass_find_device_by_seq()    - found
+drivers/core/uclass.c:546-uclass_get_device_by_ofnode() Looking for clock-26m
+drivers/core/uclass.c:397-uclass_find_device_by_ofnode() Looking for clock-26m
+drivers/core/uclass.c:416-uclass_find_device_by_ofnode()    - result for clock-26m: clock-26m (ret=0)
+drivers/core/uclass.c:549-uclass_get_device_by_ofnode()    - result for clock-26m: clock-26m (ret=0)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: clock-frequency: 0x18cba80 (26000000)
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/uclass.c:546-uclass_get_device_by_ofnode() Looking for clock-26m
+drivers/core/uclass.c:397-uclass_find_device_by_ofnode() Looking for clock-26m
+drivers/core/uclass.c:416-uclass_find_device_by_ofnode()    - result for clock-26m: clock-26m (ret=0)
+drivers/core/uclass.c:549-uclass_get_device_by_ofnode()    - result for clock-26m: clock-26m (ret=0)
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mediatek,force-highspeed: false
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>Core:  33 devices, 17 uclasses, devicetree: embed
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: timeout-sec: (not found)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: hw_margin_ms: (not found)
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: u-boot,noautostart: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: u-boot,autostart: false
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+WDT:   Started watchdog@10007000 with servicing every 1000ms (60s timeout)
+lib/efi_driver/efi_uclass.c:323-     efi_driver_init() Initializing EFI driver framework
+lib/efi_driver/efi_uclass.c:273-      efi_add_driver() Adding EFI driver 'EFI block driver'
+MMC:   drivers/core/uclass.c:346-uclass_find_device_by_seq() 0
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000'
+drivers/core/uclass.c:357-uclass_find_device_by_seq()    - found
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: bus-width: 0x4 (4)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: max-frequency: 0xbebc200 (200000000)
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: cap-sd-highspeed: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: cap-mmc-highspeed: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr12: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr25: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr50: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr104: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-ddr50: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-ddr-1_8v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-ddr-1_2v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs200-1_8v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs200-1_2v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs400-1_8v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs400-1_2v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs400-enhanced-strobe: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: no-mmc-hs400: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: non-removable: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: cd-inverted: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: broken-cd: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: no-1-8-v: false
+drivers/core/uclass.c:346-uclass_find_device_by_seq() 1
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000'
+drivers/core/uclass.c:361-uclass_find_device_by_seq()    - not found
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: bus-width: 0x4 (4)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: max-frequency: 0xbebc200 (200000000)
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: cap-sd-highspeed: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: cap-mmc-highspeed: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr12: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr25: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr50: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr104: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-ddr50: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-ddr-1_8v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-ddr-1_2v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs200-1_8v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs200-1_2v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs400-1_8v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs400-1_2v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs400-enhanced-strobe: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: no-mmc-hs400: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: non-removable: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: cd-inverted: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: broken-cd: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: no-1-8-v: false
+drivers/mmc/mmc.c:3176-           mmc_probe() mmc@11240000 - probe failed: -61
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: bus-width: 0x4 (4)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: max-frequency: 0xbebc200 (200000000)
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: cap-sd-highspeed: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: cap-mmc-highspeed: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr12: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr25: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr50: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-sdr104: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: sd-uhs-ddr50: true
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-ddr-1_8v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-ddr-1_2v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs200-1_8v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs200-1_2v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs400-1_8v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs400-1_2v: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: mmc-hs400-enhanced-strobe: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: no-mmc-hs400: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: non-removable: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: cd-inverted: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: broken-cd: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: no-1-8-v: false
+
+Loading Environment from nowhere... OK
+drivers/core/uclass.c:346-uclass_find_device_by_seq() 0
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'framebuffer@fe0d0000'
+drivers/core/uclass.c:357-uclass_find_device_by_seq()    - found
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: width: 0x438 (1080)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: height: 0x960 (2400)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: rot: (not found)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: stride: 0x1120 (4384)
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: format: a8r8g8b8
+drivers/core/lists.c:163-device_bind_driver_to_node() Cannot find driver 'vidconsole1'
+common/event.c:116-      notify_dynamic() Sending event 6/(unknown) to spy 'efi_disk del'
+drivers/core/uclass.c:346-uclass_find_device_by_seq() 0
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'framebuffer@fe0d0000'
+drivers/core/uclass.c:357-uclass_find_device_by_seq()    - found
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: width: 0x438 (1080)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: height: 0x960 (2400)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: rot: (not found)
+drivers/core/ofnode.c:417-ofnode_read_u32_index() ofnode_read_u32_index: stride: 0x1120 (4384)
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: format: a8r8g8b8
+drivers/core/lists.c:163-device_bind_driver_to_node() Cannot find driver 'vidconsole1'
+common/event.c:116-      notify_dynamic() Sending event 6/(unknown) to spy 'efi_disk del'
+In:    serial,button-kbd
+Out:   serial,vidconsole
+Err:   serial,vidconsole
+common/event.c:82-       notify_static() Sending event b/(unknown) to spy '?'
+lib/efi_driver/efi_uclass.c:346-         efi_uc_init() Initializing UCLASS_EFI_LOADER
+common/event.c:82-       notify_static() Sending event b/(unknown) to spy '?'
+lib/smbios.c:384-  smbios_write_type0() smbios_version = 000000013f665041: '2025.10-rc5-ge578644c08f0-dirty'
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: compatible: infinix,x676b
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: model: Infinix Note 12 Pro (X676B)
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: compatible: infinix,x676b
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: model: Infinix Note 12 Pro (X676B)
+drivers/core/ofnode.c:639-ofnode_read_u32_array() ofnode_read_u32_array: ranges: bind node cpu@0
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a55'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'cpu@0'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpu@1
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a55'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'cpu@1'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpu@2
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a55'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'cpu@2'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpu@3
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a55'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'cpu@3'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpu@4
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a55'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'cpu@4'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpu@5
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a55'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'cpu@5'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpu@100
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a76'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'cpu@100'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpu@101
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a76'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'cpu@101'
+lib/efi_loader/efi_smbios.c:80-install_smbios_table() SMBIOS tables written to 13f665000
+[?25h
+
+Reset SCSI
+scanning bus for devices...
+drivers/scsi/scsi.c:682-           scsi_scan() unbind ufs_scsi
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/uclass.c:546-uclass_get_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:397-uclass_find_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:416-uclass_find_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/core/uclass.c:549-uclass_get_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: reg: ofnode_read_bool: little-endian: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: big-endian: false
+drivers/core/ofnode.c:525-    ofnode_read_bool() ofnode_read_bool: native-endian: false
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/uclass.c:546-uclass_get_device_by_ofnode() Looking for syscon@10001000
+drivers/core/uclass.c:397-uclass_find_device_by_ofnode() Looking for syscon@10001000
+drivers/core/uclass.c:416-uclass_find_device_by_ofnode()    - result for syscon@10001000: syscon@10001000 (ret=0)
+drivers/core/uclass.c:549-uclass_get_device_by_ofnode()    - result for syscon@10001000: syscon@10001000 (ret=0)
+ti-syscon reset: probed 4 controls
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+drivers/core/uclass.c:546-uclass_get_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:397-uclass_find_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:416-uclass_find_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/core/uclass.c:549-uclass_get_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/core/uclass.c:546-uclass_get_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:397-uclass_find_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:416-uclass_find_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/core/uclass.c:549-uclass_get_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/ufs/ufs-mediatek.c:281-ufs_mtk_get_hw_ip_version() mediatek-ufshci ufshci@11270000: MediaTek UFS IP Version: 0x20160706
+drivers/ufs/ufs-mediatek.c:417-ufs_mtk_device_reset() mediatek-ufshci ufshci@11270000: device reset done
+drivers/ufs/ufs.c:587-   ufshcd_hba_enable() mediatek-ufshci ufshci@11270000: Controller enable failed
+drivers/ufs/ufs.c:2011-        ufshcd_probe() mediatek-ufshci ufshci@11270000: Host controller enable failed
+drivers/ufs/ufs-mediatek.c:435-       ufs_mtk_probe() mediatek-ufshci ufshci@11270000: ufshcd_probe() failed, ret:-5
+scanning bus for devices...
+drivers/scsi/scsi.c:682-           scsi_scan() unbind ufs_scsi
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/uclass.c:546-uclass_get_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:397-uclass_find_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:416-uclass_find_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/core/uclass.c:549-uclass_get_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/core/uclass.c:546-uclass_get_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:397-uclass_find_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:416-uclass_find_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/core/uclass.c:549-uclass_get_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/core/uclass.c:546-uclass_get_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:397-uclass_find_device_by_ofnode() Looking for reset-controller
+drivers/core/uclass.c:416-uclass_find_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/core/uclass.c:549-uclass_get_device_by_ofnode()    - result for reset-controller: reset-controller (ret=0)
+drivers/ufs/ufs-mediatek.c:281-ufs_mtk_get_hw_ip_version() mediatek-ufshci ufshci@11270000: MediaTek UFS IP Version: 0x20160706
+drivers/ufs/ufs-mediatek.c:417-ufs_mtk_device_reset() mediatek-ufshci ufshci@11270000: device reset done
+drivers/ufs/ufs-mediatek.c:203-ufs_mtk_link_startup_notify() mediatek-ufshci ufshci@11270000: UFS status changed to PRE_CHANGE! 0
+Resetting UFS Controller (To Secure Reset mode)!
+drivers/ufs/ufs-mediatek.c:207-ufs_mtk_link_startup_notify() mediatek-ufshci ufshci@11270000: UFS status changed to POST_CHANGE! 1
+drivers/ufs/ufs.c:121-ufshcd_print_pwr_info() mediatek-ufshci ufshci@11270000: [RX, TX]: gear=[3, 3], lane[2, 2], pwr[FAST MODE, FAST MODE], rate = 2
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1019-       is_pmbr_valid() Invalid signature ffff
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+  Device 0: (0:0) Vendor: SKhynix Prod.: H9QT1G6DN6X132 Rev: A002
+            Type: Hard Disk
+            Capacity: 4.0 MB = 0.0 GB (1024 x 4096)
+disk/part_efi.c:1019-       is_pmbr_valid() Invalid signature ffff
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+  Device 1: (0:1) Vendor: SKhynix Prod.: H9QT1G6DN6X132 Rev: A002
+            Type: Hard Disk
+            Capacity: 4.0 MB = 0.0 GB (1024 x 4096)
+disk/part_efi.c:1022-       is_pmbr_valid() Signature aa55 valid
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8, size 0x100, name boot_para
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x108, size 0x300, name proinfo
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x408, size 0x80, name misc
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x488, size 0x80, name para
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x508, size 0x8000, name expdb
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8508, size 0x100, name frp
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8608, size 0x2000, name nvcfg
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xa608, size 0x4000, name nvdata
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xe608, size 0x100, name tkv_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xe708, size 0x800, name vbmeta_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xef08, size 0x800, name vbmeta_system_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xf708, size 0x800, name vbmeta_vendor_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xff08, size 0x100, name tkv_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x10008, size 0x800, name vbmeta_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x10808, size 0x800, name vbmeta_system_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x11008, size 0x800, name vbmeta_vendor_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x11808, size 0x2000, name metadata
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x13808, size 0x37f8, name persist
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x17000, size 0x800, name protect1
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x17800, size 0x800, name protect2
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x18000, size 0x800, name seccfg
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x18800, size 0x3000, name otp
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x1b800, size 0xc800, name md1img_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28000, size 0x100, name spmfw_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28100, size 0x100, name pi_img_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28200, size 0x400, name dpm_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28600, size 0x600, name scp_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28c00, size 0x100, name sspm_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28d00, size 0x100, name mcupm_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28e00, size 0x2000, name gz_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ae00, size 0x400, name lk_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2b200, size 0x1800, name logo_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ca00, size 0x4000, name boot_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x30a00, size 0x4000, name vendor_boot_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x34a00, size 0x800, name dtbo_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35200, size 0x500, name tee_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35700, size 0x200, name sec1
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35900, size 0x80, name efuse
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35980, size 0x4000, name nvram
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x39980, size 0x1900, name dram_para
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3b280, size 0x800, name connsys_bt_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3ba80, size 0x800, name connsys_wifi_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3c280, size 0xd80, name connsys_gnss_a
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3d000, size 0xc800, name md1img_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49800, size 0x100, name spmfw_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49900, size 0x100, name pi_img_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49a00, size 0x400, name dpm_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49e00, size 0x600, name scp_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a400, size 0x100, name sspm_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a500, size 0x100, name mcupm_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a600, size 0x2000, name gz_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4c600, size 0x400, name lk_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4ca00, size 0x1800, name logo_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4e200, size 0x4000, name boot_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x52200, size 0x4000, name vendor_boot_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x56200, size 0x800, name connsys_bt_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x56a00, size 0x800, name connsys_wifi_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x57200, size 0x800, name connsys_gnss_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x57a00, size 0x800, name dtbo_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x58200, size 0x600, name tee_b
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x58800, size 0x240000, name super
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x298800, size 0x13000, name tranfs
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ab800, size 0x38e97fb, name userdata
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3b94ffb, size 0x1000, name flashinfo
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67C640
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 65
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67C6C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 66
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67C740
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 67
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67C7C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 68
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67C840
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 69
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67C8C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 70
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67C940
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 71
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67C9C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 72
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CA40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 73
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CAC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 74
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CB40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 75
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CBC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 76
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CC40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 77
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CCC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 78
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CD40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 79
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CDC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 80
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CE40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 81
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CEC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 82
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CF40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 83
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67CFC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 84
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D040
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 85
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D0C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 86
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D140
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 87
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D1C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 88
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D240
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 89
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D2C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 90
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D340
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 91
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D3C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 92
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D440
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 93
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D4C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 94
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D540
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 95
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D5C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 96
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D640
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 97
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D6C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 98
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D740
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 99
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D7C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 100
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D840
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 101
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D8C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 102
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D940
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 103
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67D9C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 104
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DA40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 105
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DAC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 106
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DB40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 107
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DBC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 108
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DC40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 109
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DCC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 110
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DD40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 111
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DDC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 112
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DE40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 113
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DEC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 114
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DF40
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 115
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67DFC0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 116
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E040
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 117
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E0C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 118
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E140
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 119
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E1C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 120
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E240
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 121
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E2C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 122
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E340
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 123
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E3C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 124
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E440
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 125
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E4C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 126
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E540
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 127
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1207-        is_pte_valid() Found an unused PTE GUID at 0x3F67E5C0
+disk/part_efi.c:235-    part_get_gpt_pte() Invalid partition number 128
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8, size 0x100, name boot_para
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8, size 0x100, name boot_para
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x108, size 0x300, name proinfo
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x108, size 0x300, name proinfo
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x408, size 0x80, name misc
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x408, size 0x80, name misc
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x488, size 0x80, name para
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x488, size 0x80, name para
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x508, size 0x8000, name expdb
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x508, size 0x8000, name expdb
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8508, size 0x100, name frp
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8508, size 0x100, name frp
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8608, size 0x2000, name nvcfg
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8608, size 0x2000, name nvcfg
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <1, 0, 32>
+fs/fs_internal.c:39-          fs_devread()  <4, 128, 128>
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xa608, size 0x4000, name nvdata
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xa608, size 0x4000, name nvdata
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <1, 0, 32>
+fs/fs_internal.c:39-          fs_devread()  <4, 128, 128>
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xe608, size 0x100, name tkv_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xe608, size 0x100, name tkv_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xe708, size 0x800, name vbmeta_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xe708, size 0x800, name vbmeta_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xef08, size 0x800, name vbmeta_system_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xef08, size 0x800, name vbmeta_system_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xf708, size 0x800, name vbmeta_vendor_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xf708, size 0x800, name vbmeta_vendor_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xff08, size 0x100, name tkv_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xff08, size 0x100, name tkv_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x10008, size 0x800, name vbmeta_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x10008, size 0x800, name vbmeta_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x10808, size 0x800, name vbmeta_system_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x10808, size 0x800, name vbmeta_system_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x11008, size 0x800, name vbmeta_vendor_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x11008, size 0x800, name vbmeta_vendor_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x11808, size 0x2000, name metadata
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x11808, size 0x2000, name metadata
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <1, 0, 32>
+fs/fs_internal.c:39-          fs_devread()  <4, 128, 128>
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x13808, size 0x37f8, name persist
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x13808, size 0x37f8, name persist
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <1, 0, 32>
+fs/fs_internal.c:39-          fs_devread()  <4, 128, 128>
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x17000, size 0x800, name protect1
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x17000, size 0x800, name protect1
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <1, 0, 32>
+fs/fs_internal.c:39-          fs_devread()  <4, 128, 128>
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x17800, size 0x800, name protect2
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x17800, size 0x800, name protect2
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <1, 0, 32>
+fs/fs_internal.c:39-          fs_devread()  <4, 128, 128>
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x18000, size 0x800, name seccfg
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x18000, size 0x800, name seccfg
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x18800, size 0x3000, name otp
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x18800, size 0x3000, name otp
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x1b800, size 0xc800, name md1img_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x1b800, size 0xc800, name md1img_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28000, size 0x100, name spmfw_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28000, size 0x100, name spmfw_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28100, size 0x100, name pi_img_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28100, size 0x100, name pi_img_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28200, size 0x400, name dpm_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28200, size 0x400, name dpm_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28600, size 0x600, name scp_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28600, size 0x600, name scp_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28c00, size 0x100, name sspm_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28c00, size 0x100, name sspm_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28d00, size 0x100, name mcupm_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28d00, size 0x100, name mcupm_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28e00, size 0x2000, name gz_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28e00, size 0x2000, name gz_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ae00, size 0x400, name lk_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ae00, size 0x400, name lk_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2b200, size 0x1800, name logo_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2b200, size 0x1800, name logo_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ca00, size 0x4000, name boot_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ca00, size 0x4000, name boot_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x30a00, size 0x4000, name vendor_boot_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x30a00, size 0x4000, name vendor_boot_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x34a00, size 0x800, name dtbo_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x34a00, size 0x800, name dtbo_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35200, size 0x500, name tee_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35200, size 0x500, name tee_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35700, size 0x200, name sec1
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35700, size 0x200, name sec1
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35900, size 0x80, name efuse
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35900, size 0x80, name efuse
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35980, size 0x4000, name nvram
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35980, size 0x4000, name nvram
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x39980, size 0x1900, name dram_para
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x39980, size 0x1900, name dram_para
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3b280, size 0x800, name connsys_bt_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3b280, size 0x800, name connsys_bt_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3ba80, size 0x800, name connsys_wifi_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3ba80, size 0x800, name connsys_wifi_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3c280, size 0xd80, name connsys_gnss_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3c280, size 0xd80, name connsys_gnss_a
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3d000, size 0xc800, name md1img_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3d000, size 0xc800, name md1img_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49800, size 0x100, name spmfw_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49800, size 0x100, name spmfw_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49900, size 0x100, name pi_img_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49900, size 0x100, name pi_img_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49a00, size 0x400, name dpm_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49a00, size 0x400, name dpm_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49e00, size 0x600, name scp_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49e00, size 0x600, name scp_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a400, size 0x100, name sspm_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a400, size 0x100, name sspm_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a500, size 0x100, name mcupm_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a500, size 0x100, name mcupm_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a600, size 0x2000, name gz_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a600, size 0x2000, name gz_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4c600, size 0x400, name lk_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4c600, size 0x400, name lk_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4ca00, size 0x1800, name logo_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4ca00, size 0x1800, name logo_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4e200, size 0x4000, name boot_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4e200, size 0x4000, name boot_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x52200, size 0x4000, name vendor_boot_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x52200, size 0x4000, name vendor_boot_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x56200, size 0x800, name connsys_bt_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x56200, size 0x800, name connsys_bt_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x56a00, size 0x800, name connsys_wifi_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x56a00, size 0x800, name connsys_wifi_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x57200, size 0x800, name connsys_gnss_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x57200, size 0x800, name connsys_gnss_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x57a00, size 0x800, name dtbo_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x57a00, size 0x800, name dtbo_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x58200, size 0x600, name tee_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x58200, size 0x600, name tee_b
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x58800, size 0x240000, name super
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x58800, size 0x240000, name super
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x298800, size 0x13000, name tranfs
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x298800, size 0x13000, name tranfs
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <1, 0, 32>
+fs/fs_internal.c:39-          fs_devread()  <4, 256, 128>
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ab800, size 0x38e97fb, name userdata
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ab800, size 0x38e97fb, name userdata
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3b94ffb, size 0x1000, name flashinfo
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3b94ffb, size 0x1000, name flashinfo
+fs/fs_internal.c:39-          fs_devread()  <0, 1024, 1024>
+fs/fs_internal.c:39-          fs_devread()  <16, 0, 4096>
+fs/fs_internal.c:39-          fs_devread()  <0, 0, 4096>
+fs/fs.c:52-fs_probe_unsupported() Unrecognized filesystem type
+  Device 2: (0:2) Vendor: SKhynix Prod.: H9QT1G6DN6X132 Rev: A002
+            Type: Hard Disk
+            Capacity: 244064.0 MB = 238.3 GB (62480384 x 4096)
+
+Device 2: (0:2) Vendor: SKhynix Prod.: H9QT1G6DN6X132 Rev: A002
+            Type: Hard Disk
+            Capacity: 244064.0 MB = 238.3 GB (62480384 x 4096)
+... is now current device
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8, size 0x100, name boot_para
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x108, size 0x300, name proinfo
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x408, size 0x80, name misc
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x488, size 0x80, name para
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x508, size 0x8000, name expdb
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8508, size 0x100, name frp
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8608, size 0x2000, name nvcfg
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xa608, size 0x4000, name nvdata
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xe608, size 0x100, name tkv_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xe708, size 0x800, name vbmeta_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xef08, size 0x800, name vbmeta_system_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xf708, size 0x800, name vbmeta_vendor_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xff08, size 0x100, name tkv_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x10008, size 0x800, name vbmeta_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x10808, size 0x800, name vbmeta_system_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x11008, size 0x800, name vbmeta_vendor_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x11808, size 0x2000, name metadata
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x13808, size 0x37f8, name persist
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x17000, size 0x800, name protect1
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x17800, size 0x800, name protect2
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x18000, size 0x800, name seccfg
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x18800, size 0x3000, name otp
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x1b800, size 0xc800, name md1img_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28000, size 0x100, name spmfw_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28100, size 0x100, name pi_img_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28200, size 0x400, name dpm_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28600, size 0x600, name scp_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28c00, size 0x100, name sspm_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28d00, size 0x100, name mcupm_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28e00, size 0x2000, name gz_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ae00, size 0x400, name lk_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2b200, size 0x1800, name logo_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ca00, size 0x4000, name boot_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x30a00, size 0x4000, name vendor_boot_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x34a00, size 0x800, name dtbo_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35200, size 0x500, name tee_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35700, size 0x200, name sec1
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35900, size 0x80, name efuse
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35980, size 0x4000, name nvram
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x39980, size 0x1900, name dram_para
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3b280, size 0x800, name connsys_bt_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3ba80, size 0x800, name connsys_wifi_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3c280, size 0xd80, name connsys_gnss_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3d000, size 0xc800, name md1img_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49800, size 0x100, name spmfw_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49900, size 0x100, name pi_img_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49a00, size 0x400, name dpm_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49e00, size 0x600, name scp_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a400, size 0x100, name sspm_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a500, size 0x100, name mcupm_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a600, size 0x2000, name gz_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4c600, size 0x400, name lk_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4ca00, size 0x1800, name logo_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4e200, size 0x4000, name boot_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x52200, size 0x4000, name vendor_boot_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x56200, size 0x800, name connsys_bt_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x56a00, size 0x800, name connsys_wifi_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x57200, size 0x800, name connsys_gnss_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x57a00, size 0x800, name dtbo_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x58200, size 0x600, name tee_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x58800, size 0x240000, name super
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x298800, size 0x13000, name tranfs
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ab800, size 0x38e97fb, name userdata
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8, size 0x100, name boot_para
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x108, size 0x300, name proinfo
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x408, size 0x80, name misc
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x488, size 0x80, name para
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x508, size 0x8000, name expdb
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8508, size 0x100, name frp
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x8608, size 0x2000, name nvcfg
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xa608, size 0x4000, name nvdata
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xe608, size 0x100, name tkv_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xe708, size 0x800, name vbmeta_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xef08, size 0x800, name vbmeta_system_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xf708, size 0x800, name vbmeta_vendor_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0xff08, size 0x100, name tkv_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x10008, size 0x800, name vbmeta_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x10808, size 0x800, name vbmeta_system_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x11008, size 0x800, name vbmeta_vendor_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x11808, size 0x2000, name metadata
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x13808, size 0x37f8, name persist
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x17000, size 0x800, name protect1
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x17800, size 0x800, name protect2
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x18000, size 0x800, name seccfg
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x18800, size 0x3000, name otp
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x1b800, size 0xc800, name md1img_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28000, size 0x100, name spmfw_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28100, size 0x100, name pi_img_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28200, size 0x400, name dpm_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28600, size 0x600, name scp_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28c00, size 0x100, name sspm_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28d00, size 0x100, name mcupm_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x28e00, size 0x2000, name gz_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ae00, size 0x400, name lk_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2b200, size 0x1800, name logo_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ca00, size 0x4000, name boot_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x30a00, size 0x4000, name vendor_boot_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x34a00, size 0x800, name dtbo_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35200, size 0x500, name tee_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35700, size 0x200, name sec1
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35900, size 0x80, name efuse
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x35980, size 0x4000, name nvram
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x39980, size 0x1900, name dram_para
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3b280, size 0x800, name connsys_bt_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3ba80, size 0x800, name connsys_wifi_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3c280, size 0xd80, name connsys_gnss_a
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x3d000, size 0xc800, name md1img_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49800, size 0x100, name spmfw_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49900, size 0x100, name pi_img_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49a00, size 0x400, name dpm_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x49e00, size 0x600, name scp_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a400, size 0x100, name sspm_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a500, size 0x100, name mcupm_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4a600, size 0x2000, name gz_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4c600, size 0x400, name lk_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4ca00, size 0x1800, name logo_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x4e200, size 0x4000, name boot_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x52200, size 0x4000, name vendor_boot_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x56200, size 0x800, name connsys_bt_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x56a00, size 0x800, name connsys_wifi_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x57200, size 0x800, name connsys_gnss_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x57a00, size 0x800, name dtbo_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x58200, size 0x600, name tee_b
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x58800, size 0x240000, name super
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x298800, size 0x13000, name tranfs
+disk/part_efi.c:1156-alloc_read_gpt_entries() count = 128 * 128 = 16384
+disk/part_efi.c:321-   part_get_info_efi() start 0x2ab800, size 0x38e97fb, name userdata
+Created "root"
+Block 0x0+0x38e97fb mapped to block 0x2ab800 of "scsi 2"
+Hit any key to stop autoboot:  5 Hit any key to stop autoboot: 4[KHit any key to stop autoboot: 3[KHit any key to stop autoboot: 2[KHit any key to stop autoboot: 1[KHit any key to stop autoboot: 0[K
+
+scsi read: device 2 block # 182784, count 16384 ... 16384 blocks read: OK
+
+scsi read: device 2 block # 199168, count 16384 ... 16384 blocks read: OK
+## Booting Android Image at 0x40000000 ...
+Kernel load addr 0x00000000 size 19002 KiB
+Kernel extra command line: bootopt=64S3,32N2,64N2
+RAM disk load addr 0x66f00000 size 28000 KiB
+Working FDT set to 439b1040
+   Uncompressing Kernel Image to 0
+"Error" handler, esr 0xbe000011
+elr: 0000000050fb61a8 lr : ffffffff13053f9f (reloc)
+elr: 000000013ff621a8 lr : 0000000001ffff9f
+x0 : 000000013f65d460 x1 : 0000000001ffffa1
+x2 : 00000000000001f3 x3 : 000000000000000b
+x4 : 000000013f6d7a00 x5 : 0000000002000000
+x6 : 0000000040f34cae x7 : 0000000000000001
+x8 : 000000013f6d74b0 x9 : 000000013f6d83e0
+x10: 0000000003fffeff x11: 000000004128f6f8
+x12: 0000000000000000 x13: 00000000fffffe00
+x14: 0000000000000006 x15: 0000000000000000
+x16: 0000000000000000 x17: 0000000000000000
+x18: 000000013f65dbb0 x19: 0000000000000004
+x20: 0000000001ffffa1 x21: 000000000000000a
+x22: 0000000000000005 x23: 0000000002000002
+x24: 0000000000000000 x25: 0000000000000000
+x26: 0000000000000000 x27: 0000000040000000
+x28: 0000000000000000 x29: 000000013f65d320
+
+Code: aa0503f7 d503201f aa1403e1 39400298 (f1000673) 
+Resetting CPU ...
+
+resetting ...
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: method: smc
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+ € €€   €   €   €         €           € €€   €€   €   €      €              €€€€         €€€€ € €€   €€   €   €      €             € €€   €€€  €                      € €€  €€€   €                       €€€€      €  €€€€ € €€      €                      € €€   € €€ €                   € €    €€€€        €€€€ € €€ € €   €       €               € €€ €€ €€ € €                       €€€€         €€€€ € €€ € €€€€  €     €€            € €    €€€€        €€€€ € €€ € €€ € €                       €€€€      €€€ €€€€ € €€  €€€   €               €    €    €€€€        €€€€€ € €€  €€€€   €                       €€€€  €      €€€€€€  €  €€€    €                  €€€ €€   €€€€  €    €  €€€€€€  €  €€€€   €         €€€    €   €  €    €€€€  €€€   €€€ €€€€€€  €  € €€€€€€€€€ €   €€€€€    €  € € €€  € €€ [PL_LOG_STORE: check once, sig value 0xB4000068, addr 0x116000.
+PL_LOG_STORE:sram->sig value 0xB9400509!
+PL_LOG_STORE:sram header is not match, format all!
+PL_LOG_STORE:set ram_header->sig = 0xABCD1234
+SYST] CNTCV 048801C
+LASTPC "CPU0 pc=0x7BAC43017A77D506"
+#T#DCM=33
+Pll init start...
+abist meter[51] = 257968 Khz
+[CPU_LL_FREQ] AD_ARMPLL_LL_CK = 1032 Mhz
+abist meter[51] = 168692 Khz
+[CCIPLL_FREQ] AD_CCIPLL_BL0_CK = 675 Mhz
+INFRACFG_AO_INFRA_BUS_DCM_CTRL: 0x787FE0, INFRACFG_AO_MODULE_CG_0: 0x0, INFRACFG_AO_MODULE_CG_1: 0x4400, INFRACFG_AO_MODULE_CG_2: 0x0, INFRACFG_AO_MODULE_CG_3: 0x1004000, INFRACFG_AO_MODULE_CG_4: 0x41000000, INFRACFG_AO_MODULE_SW_CG_5: 0x0, INFRACFG_AO_PERI_BUS_DCM_CTRL: 0x4787FE0
+APMIXED_AP_PLL_5: 0x32BF8
+disp mtcmos Start..
+disp mtcmos Done!
+MMSYS_CONFIG_MMSYS_CG_0: 0xFE848040, MMSYS_CONFIG_MMSYS_CG_2: 0xFFFFFBFE
+MDPSYS_CONFIG_MDPSYS_CG_0: 0xFFFF0030, MDPSYS_CONFIG_MDPSYS_CG_2: 0xFFFFFEFE
+Pll init Done!!
+#T#PLL=12
+#T#GPIO=0
+[RGU] rst from: TFA
+[RGU] STA from reg:       0x40000000
+[RGU] MODE:               0x25
+[RGU] STA:                0x40000000
+[RGU] LENGTH:             0xFFE0
+[RGU] INTERVAL:           0xFFF
+[RGU] SWSYSRST:           0x0
+[RGU] LATCH_CTL:          0x21E71
+[RGU] LATCH_CTL2:         0x0
+[RGU] NONRST_REG:         0x0
+[RGU] NONRST_REG2:        0x3C002000
+[RGU] REQ_MODE:           0x3F00F2
+[RGU] REQ_IRQ_EN:         0x3B00F0
+[RGU] DEBUG_CTL:          0x0
+[RGU] parse g_rgu_status: 2 (0x2)
+[RGU] Set NONRST_REG to 0x40000000
+[RGU] mtk_wdt_mode_config mode value=34, tmp:22000034
+[DOE_ENV]get_env apwdt_en
+[RGU] mtk_wdt_mode_config mode value=7D, tmp:2200007D
+[RGU] mtk_wdt_reset_deglitch_enable: MTK_WDT_RSTDEG_EN1(8000A357), MTK_WDT_RSTDEG_EN2(800067D2)
+[RGU] rgu_update_reg: 0, bits: 0xC000, addr: 0x10007040, val: 0x0
+[RGU] rgu_update_reg: 0, bits: 0x300, addr: 0x100070A0, val: 0x0
+[RGU] mtk_wdt_pre_init: MTK_WDT_DEBUG_CTL(0x0)
+[RGU] mtk_wdt_pre_init: MTK_WDT_DEBUG_CTL2(0x0)
+[RGU] mtk_wdt_pre_init: MTK_WDT_LATCH_CTL(0x21E71)
+[RGU] mtk_wdt_pre_init: MTK_WDT_REQ_MODE(3F00F2), MTK_WDT_REQ_IRQ_EN(3B00F0)
+#T#WDT_PRE=12
+RAM_CONSOLE wdt status 0x2
+#T#Ram console=0
+abist meter[37] = 241004 Khz
+abist meter[37] = 308340 Khz
+abist meter[37] = 270460 Khz
+abist meter[37] = 254512 Khz
+abist meter[37] = 262332 Khz
+abist meter[37] = 258372 Khz
+abist meter[37] = 261216 Khz
+abist meter[37] = 258372 Khz
+abist meter[37] = 261216 Khz
+abist meter[37] = 261116 Khz
+[PMIF] ULPOSC1 K done: 261M, PLL_ULPOSC1_CON0/1/2 0x3CA94A 0x2900 0x41
+[pmifclkmgr_set_spmi_clk] done
+[pmifclkmgr_set_spi_clk] done
+#T#PMIFCLKMGR=6
+[PWRAP] pwrap_init_preloader
+[PWRAP] is_pwrap_init_done 0
+[PWRAP] pwrap_init start!!!!!!!!!!!!!
+[PWRAP] Reset SPISLV ok
+[PWRAP] Set Read Dummy Cycle ok
+[PWRAP] _pwrap_init_dio ok
+[PWRAP] _pwrap_init_reg_clock ok
+[PWRAP] __pwrap_InitSPISLV ok
+[PWRAP] si_sampling_ck_dly = 0, si_sampling_ck_pol = 0
+[PWRAP] si_sample_ctrl = 0, rdata = D6A9
+[PWRAP] First Valid Sampling Clock Found!!!
+[PWRAP] si_sampling_ck_dly = 0, si_sampling_ck_pol = 1
+[PWRAP] si_sample_ctrl = 20, rdata = 5AA5
+[PWRAP] si_dly = 0, *RG_SPI_CON2 = 0, rdata = 1B27
+[PWRAP] si_dly = 1, *RG_SPI_CON2 = 1, rdata = 1B27
+[PWRAP] si_dly = 2, *RG_SPI_CON2 = 2, rdata = 1B27
+[PWRAP] si_dly = 3, *RG_SPI_CON2 = 3, rdata = 1B27
+[PWRAP] si_dly = 4, *RG_SPI_CON2 = 4, rdata = 1B27
+[PWRAP] si_dly = 5, *RG_SPI_CON2 = 5, rdata = 1B27
+[PWRAP] si_dly = 6, *RG_SPI_CON2 = 6, rdata = 1B27
+[PWRAP] Data Boundary is Found !!!
+[PWRAP] si_dly = 7, rdata = A65
+[PWRAP] si_sample_ctrl=0x20(before)
+[PWRAP] si_sample_ctrl=0x40(after)(non-FPGA)
+[PWRAP] SI Strobe Calibration For PMIC 0 Done
+[PWRAP] si_sample_ctrl = 40, si_dly = 7
+[PWRAP] _pwrap_init_sistrobe Read Test ok
+[PWRAP] _pwrap_init_sistrobe ok
+[PWRAP] _pwrap_lock_SPISLVReg ok
+[PWRAP] _pwrap_wacs2_write_test ok
+[PWRAP] Enable CRC ok
+[PWRAP] _pwrap_InitStaUpd ok
+[PWRAP] PMIF_SPI_PMIF_MPU_CTRL = 0x34
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_0_START = 0x600
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_0_END = 0x67E
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_0_PER = 0xFF3FFFFB
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_1_START = 0x800
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_1_END = 0x13FE
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_1_PER = 0xFFFCFFF8
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_2_START = 0x1400
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_2_END = 0x207E
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_2_PER = 0xFFFCFFF0
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_3_START = 0x2080
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_3_END = 0x26FE
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_3_PER = 0xFFFCFF38
+[PWRAP] _pwrap_config_mpu ok
+[PWRAP] start pwrap_read_test
+[PWRAP] rdata=0x5AA5
+[PWRAP] Read Test pass, return_value = 0x0
+[PWRAP] start pwrap_write_test
+[PWRAP] after pwrap_write_test
+[PWRAP] rdata=0xA55A (read back)
+[PWRAP] Write Test pass
+[PWRAP] channel pass
+[PWRAP] REC_CMD0:0x410 (The last one adr)
+[PWRAP] REC_WDATA0:0xA55A (The last one wdata)
+[PWRAP] REC_CMD1:0x1DA0 (The second-last adr)
+[PWRAP] REC_WDATA1:0xB (The second-last wdata)
+[PWRAP] REC_CMD2:0x1DA6 (The third-last adrs)
+[PWRAP] REC_WDATA2:0x0 (The third-last wdata)
+[PWRAP] enable spi debug ok
+[PWRAP] clear record command ok
+
+[PWRAP] PMIC_WRAP_MONITOR_MODE = Logging Mode
+[PWRAP] PMIF_SPI_PMIF_MONITOR_CTRL = 0x5
+[PWRAP] PMIF_SPI_PMIF_MONITOR_TARGET_CHAN_0 = 0x1FBFFF
+[PWRAP] PMIF_SPI_PMIF_MONITOR_TARGET_ADDR_0 = 0x0
+[PWRAP] PMIF_SPI_PMIF_MONITOR_TARGET_WDATA_0 = 0x0
+[PWRAP] init pass, ret=0.
+#T#PWRAP=31
+[TIA] trigger addr setup ok
+[TIA] trigger value setup ok
+[TIA] read back addr setup ok
+[TIA] delay setup ok
+[TIA] lock TIA_AUXADC register ok
+[TIA] TIA init done
+#T#TIA=2
+pmif_spmi_set_lp_mode bringup sleep legacy mode
+#T#SPMI_NO_SRCLKEN_RC=0
+Current RTC time:[2010/1/1 0:0:52]
+#T#I2C=1
+0:0x4000, 1:0x0, 2:0x0, 3:0x102, 4:0x1, STA:0x0, S:0x1, FAB0:0x0, FAB11:0x0
+s4: 0x1
+[PL] spare4 = 0x1
+[PL] segment = 0x1
+DATE_CODE_YY:0, DATE_CODE_WW:0
+[SegCode] Segment Code:0x1, PROJECT_CODE:0x0, FAB_CODE:0x0, RW_STA:0x0, CTL:0x0, DCM:0x7
+#T#DEVINFO=3
+[PMIC]Preloader Start
+[PMIC] CHIP Code = 0x6610
+[PMIC]POWER_HOLD :0x1
+[PMIC]TOP_RST_STATUS[0x152]=0x48
+[PMIC]PONSTS[0xC]=0x0
+[PMIC]POFFSTS[0xE]=0x400
+[PMIC]PG_SDN_STS0[0x16]=0xFFFF
+[PMIC]PG_SDN_STS1[0x18]=0xFF00
+[PMIC]OC_SDN_STS0[0x1A]=0x0
+[PMIC]BUCK_OC_SDN_STATUS[0x1332]=0x0
+[PMIC]BUCK_OC_SDN_EN[0x1346]=0x1FF
+[PMIC]THERMALSTATUS[0x1C]=0x0
+[PMIC]STRUP_CON4[0xA1C]=0x2000
+[PMIC]TOP_RST_MISC[0x14C]=0x204
+[PMIC]TOP_CLK_TRIM[0x388]=0x6AC0
+latch VSRAM_PROC11 925000 uV(0x66)
+latch VSRAM_PROC12 850000 uV(0x24)
+latch VPROC11 825000 uV(0x2E)
+latch VPROC12 618750 uV(0x1A)
+latch VSRAM_CORE 825000 uV(0x2E)
+latch VCORE 725000 uV(0x36)
+latch VSRAM_OTHERS 750000 uV(0x3C)
+latch VMODEM 825000 uV(0x2E)
+latch VSRAM_GPU 850000 uV(0x24)
+latch VGPU 850000 uV(0x24)
+[pmic_check_rst] AP Watchdog
+[PMIC]just_rst = 0
+[pwrkey_dbg_status] powerkey:0 count=0(ms) g_pwrkey_release=0
+[pmic_wdt_set] TOP_RST_MISC=0x225
+mtk_subpmic_init (1.0.3_MTK)
+rt9471_enable_autoaicr en = 0
+rt9471_set_wdt time = 0(0x00000000)
+rt9471_set_cv cv = 4400000(0x00000032)
+rt9471_set_vac_ovp vac_ovp = 14000000(0x00000003)
+rt9471_enable_bc12 en = 0
+rt9471_enable_bc12 en = 1
+[PMIC]Init done
+#T#PMIC=14
+pl_chgpump_reset start!
+hl7138_check_devinfo chip_id(10), type(standalone)
+hl7138_get_dp_dm dp(0) dm(0) ret:0
+hl7138_rfc_reset rfc_usb_switch_gpio(155)
+hl7138_rfc_reset done(0)
+pl_chgpump_reset done(0)
+Enter mtk_kpd_gpio_set! 
+SEAN TEST no key
+====> GZ (0)[    5.467320]Version of MTEE: mTEE_SDK: 2.2.2.004.S0MP1, Built: 16:05:09 Oct 17 2022
+
+Say Hello from EL2!
+
+MIDR: 412fd050, MPIDR: 81000000
+CPU Core: 0!
+GZ Platform: MTK_ARMV8
+Memory base: 0x846c00000, size: 0x1200000
+lk_init 0x3805c808-0x3805cbe0=984
+48600000 48600000 5920 11002000 in lk_main
+====> GZ (0)[    0.002368]Version of GZ-CORE: GZ_CORE_hypervisor: 3.2.0.050.S0MP1, Built: 16:05:06 Oct 17 2022
+====> GZ (0)[    0.003579]platform_init_mmu_mappings membase: 0x846c00000
+====> GZ (0)[    0.004392]platform_init_mmu_mappings memsize: 0x1200000
+====> GZ (0)[    0.005184]platform_init_mmu_mappings kernel offset: 0x38000000
+====> GZ (0)[    0.006052]platform_init_mmu_mappings ram phys: 0x87ec00000
+====> GZ (0)[    0.006876]platform_init_mmu_mappings ram size: 1200000
+====> GZ (0)[    0.007695]INIT: cpu 0, calling hook 0x38009254 (libvmm_early) at level 0x10000, flags 0x1
+
+welcome to lk/MP
+
+boot args 0x48600000 0x48600000 0x5920 0x11002000
+calling constructors
+initializing heap
+====> GZ (0)[    0.010063]INIT: cpu 0, calling hook 0x380400f8 (vm_preheap) at level 0x3ffff, flags 0x1
+====> GZ (0)[    0.011297]base 0x382fa000 size 8192 bytes, heap_grow_sz:8192
+====> GZ (0)[    0.012120]base 0x382fc000 size 4096 bytes, heap_grow_sz:4096
+initializing kernel
+====> GZ (0)[    0.013188]INIT: cpu 0, calling hook 0x3800b570 (plat_sip_smc_ver) at level 0x50000, flags 0x1
+====> GZ (0)[    0.014393]plat_sip_smc_version_init sip ver, major=0xffffffff, minor=0x0
+====> GZ (0)[    0.015368]plat_sip_smc_version_init sip smc remaked is supported!
+====> GZ (0)[    0.016268]INIT: cpu 0, calling hook 0x38040150 (vm) at level 0x50000, flags 0x1
+====> GZ (0)[    0.017325]INIT: cpu 0, calling hook 0x380093bc (libvmm) at level 0x50001, flags 0x1
+====> GZ (0)[    0.018426]get_parameter_from_atag:281 new boot tag version detected!
+====> GZ (0)[    0.019349][platform_set_boot_mode]:gz boot mode is 1 
+====> GZ (0)[    0.020123]platform_set_boot_info BOOT_TAG_IS_ABNORMAL_BOOT found=0x0!
+
+
+U-Boot 2025.10-rc5-ge578644c08f0-dirty (Jul 10 2026 - 00:46:11 +0300) mt6878-tetris
+
+Model: Infinix Note 12 Pro (X676B)
+DRAM:  common/malloc_simple.c:26-        alloc_simple() size=30, ptr=d18, limit=2000: 51084da8
+common/malloc_simple.c:26-        alloc_simple() size=60, ptr=d78, limit=2000: 51084dd8
+4 GiB (total 8 GiB)
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/lists.c:216-      lists_bind_fdt() bind node clock-32k
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'fixed-clock'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'fixed_clock' for 'fixed-clock'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node clock-13m
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'fixed-clock'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'fixed_clock' for 'fixed-clock'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node clock-26m
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'fixed-clock'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'fixed_clock' for 'fixed-clock'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node clock-ulposc
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'fixed-clock'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'fixed_clock' for 'fixed-clock'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpus
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'cpus' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node cpu-map
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'cpu-map' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node pmu-a55
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a55-pmu'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'pmu-a55'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node pmu-a78
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,cortex-a76-pmu'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'pmu-a78'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node pmu-dsu
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,dsu-pmu'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'pmu-dsu'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node psci
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,psci-1.0'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'psci' for 'arm,psci-1.0'
+drivers/core/lists.c:163-device_bind_driver_to_node() Cannot find driver 'psci-sysreset'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node soc@0
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'simple-bus'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'simple_bus' for 'simple-bus'
+drivers/core/ofnode.c:639-ofnode_read_u32_array() ofnode_read_u32_array: ranges: bind node performance-controller@11bc00
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,cpufreq-hw'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'performance-controller@11bc00'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node interrupt-controller@c000000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,gic-v3'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'interrupt-controller@c000000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@10000000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-topckgen'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-topckgen'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@10001000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-infracfg_ao'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-infracfg_ao'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node reset-controller
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'ti,syscon-reset'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'ti-syscon-reset' for 'ti,syscon-reset'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@1000c000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-apmixedsys'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8187-apmixedsys'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@10003000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-pericfg-ao'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-pericfg-ao'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@11210000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-afe'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-afe'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@13fbf000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-mfg'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-mfg'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@14000000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-mmsys'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-mmsys'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@1101b000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-imp_iic_wrap_c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-imp_iic_wrap_c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@11e02000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-imp_iic_wrap_w'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-imp_iic_wrap_w'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@11eb4000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-imp_iic_wrap_en'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-imp_iic_wrap_en'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node syscon@11f01000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-imp_iic_wrap_n'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-imp_iic_wrap_n'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'syscon'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'syscon' for 'syscon'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node pinctrl
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-pinctrl'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-pinctrl'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'pinctrl'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node serial@11002000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6577-uart'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'serial_mtk' for 'mediatek,mt6577-uart'
+drivers/core/device.c:95-  device_bind_common()    - seq=0
+drivers/core/lists.c:216-      lists_bind_fdt() bind node usb0@11200000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8518-musb'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mtk-musb'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'usb0@11200000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node t-phy@11f40000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,generic-tphy-v2'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'mtk-tphy' for 'mediatek,generic-tphy-v2'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node mmc@11240000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8183-mmc'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'mtk_sd' for 'mediatek,mt8183-mmc'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node ufshci@11270000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-ufshci'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'mediatek-ufshci' for 'mediatek,mt6789-ufshci'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11e00000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11e00000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11e01000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11e01000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11eb0000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11eb0000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11015000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11015000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11eb1000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11eb1000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11017000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11017000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@1101a000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@1101a000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11f00000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11f00000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11eb2000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11eb2000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node i2c@11eb3000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6789-i2c'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-i2c'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'i2c@11eb3000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node watchdog@10007000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt8781-wdt'
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'mediatek,mt6589-wdt'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'mtk_wdt' for 'mediatek,mt6589-wdt'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node timer
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'arm,armv8-timer'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'timer'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node aliases
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'aliases' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node chosen
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'chosen' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node memory
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'memory' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node reserved-memory
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'reserved-memory' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node framebuffer@fe0d0000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'simple-framebuffer'
+drivers/core/lists.c:265-      lists_bind_fdt()    - found match at driver 'simple_video' for 'simple-framebuffer'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node wifi@bf000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'wifi@bf000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node consys_emi@7d000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'consys_emi@7d000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node sspm_ap@9f560000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'sspm_ap@9f560000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node ap_md_c_smem@8c000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'ap_md_c_smem@8c000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node ap_md_nc_smem@8e000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'ap_md_nc_smem@8e000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node md_mem@e3200000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'md_mem@e3200000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node md_mem2@de800000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'md_mem2@de800000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node md_mem3@ddc00000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'md_mem3@ddc00000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node md_mem4@dc000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'md_mem4@dc000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node ccci_tag@bf9f0000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'ccci_tag@bf9f0000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node scp_share@8f000000
+drivers/core/lists.c:237-      lists_bind_fdt()    - attempt to match compatible string 'shared-dma-pool'
+drivers/core/lists.c:287-      lists_bind_fdt() No match for node 'scp_share@8f000000'
+drivers/core/lists.c:216-      lists_bind_fdt() bind node scp@bfa00000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'scp@bfa00000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node dfdmcu_dump@fd000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'dfdmcu_dump@fd000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node crypto_hw@48401000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'crypto_hw@48401000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node tee@70000000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'tee@70000000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node tee_sec@7de00000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'tee_sec@7de00000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node mcupm@7feb0000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'mcupm@7feb0000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node sspm@9fe70000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'sspm@9fe70000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node bl31@48200000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'bl31@48200000' has no compatible string
+drivers/core/lists.c:216-      lists_bind_fdt() bind node framebuffer@fe0d0000
+drivers/core/lists.c:221-      lists_bind_fdt() Device 'framebuffer@fe0d0000' has no com Í}‰¥¹‘}™‘Ñ¡) å¤R••}±­Õ0700000  
