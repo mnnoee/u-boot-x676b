@@ -1,0 +1,569 @@
+[?25h[2J[1;1Hboot_params = 0x0000000000000000
+DRAM bank   = 0x0000000000000000
+-> start    = 0x0000000040000000
+-> size     = 0x0000000100000000
+DRAM bank   = 0x0000000000000001
+-> start    = 0x0000000100000000
+-> size     = 0x0000000100000000
+flashstart  = 0x0000000000000000
+flashsize   = 0x0000000000000000
+flashoffset = 0x0000000000000000
+baudrate    = 921600 bps
+relocaddr   = 0x000000013feb9000
+reloc off   = 0x00000000eefb9000
+Build       = 64-bit
+fdt_blob    = 0x000000013ffa49a0
+Video       = framebuffer@fe0c8000 inactive
+lmb_dump_all:
+ memory.count = 0x1
+ memory[0]	[0x40000000-0x1ffffffff], 0x1c0000000 bytes, flags: none
+ reserved.count = 0x17
+ reserved[0]	[0x48200000-0x483fffff], 0x200000 bytes, flags: no-map
+ reserved[1]	[0x48401000-0x48401fff], 0x1000 bytes, flags: no-map
+ reserved[2]	[0x48500000-0x485fffff], 0x100000 bytes, flags: no-map
+ reserved[3]	[0x50700000-0x50efffff], 0x800000 bytes, flags: no-map
+ reserved[4]	[0x70000000-0x75ffffff], 0x6000000 bytes, flags: no-map
+ reserved[5]	[0x7d000000-0x7d4fffff], 0x500000 bytes, flags: no-map
+ reserved[6]	[0x7de00000-0x7e5fffff], 0x800000 bytes, flags: no-map
+ reserved[7]	[0x7e800000-0x7fdfffff], 0x1600000 bytes, flags: no-map
+ reserved[8]	[0x7feb0000-0x7ffaffff], 0x100000 bytes, flags: no-map
+ reserved[9]	[0x7ffff000-0x7fffffff], 0x1000 bytes, flags: no-map
+ reserved[10]	[0x8c000000-0x8d69ffff], 0x16a0000 bytes, flags: no-map
+ reserved[11]	[0x8e000000-0x8edfffff], 0xe00000 bytes, flags: no-map
+ reserved[12]	[0x8f000000-0x8f59ffff], 0x5a0000 bytes, flags: no-map
+ reserved[13]	[0x9f560000-0x9f66ffff], 0x110000 bytes, flags: no-map
+ reserved[14]	[0x9fe70000-0x9ffeffff], 0x180000 bytes, flags: no-map
+ reserved[15]	[0xbf000000-0xbf5fffff], 0x600000 bytes, flags: no-map
+ reserved[16]	[0xbf9f0000-0xbfdfffff], 0x410000 bytes, flags: no-map
+ reserved[17]	[0xdc000000-0xdd4affff], 0x14b0000 bytes, flags: no-map
+ reserved[18]	[0xe3200000-0xe3ffffff], 0xe00000 bytes, flags: no-map
+ reserved[19]	[0xfd000000-0xfd0fffff], 0x100000 bytes, flags: no-map
+ reserved[20]	[0xfe0c8000-0xffff6fff], 0x1f2f000 bytes, flags: no-overwrite
+ reserved[21]	[0x13c5e1000-0x13c669fff], 0x89000 bytes, flags: no-notify, no-overwrite
+ reserved[22]	[0x13c66aba0-0x1ffffffff], 0xc3995460 bytes, flags: no-overwrite
+devicetree  = embed
+arch_number = 0x0000000000000000
+TLB addr    = 0x000000013ffc0000
+irq_sp      = 0x000000013f66aba0
+sp start    = 0x000000013f66aba0
+Board Type  = 0
+Early malloc usage: d78 / 2000
+Press any key to continue...
+=> ^T(¤!!
+Unknown command '^T(¤!!' - try 'help'
+=> 
+Unknown command '^T(¤!!' - try 'help'
+=> •E^H^
+Unknown command '•E^H^' - try 'help'
+=> 
+Unknown command '•E^H^' - try 'help'
+=> help
+?         - alias for 'help'
+abootimg  - manipulate Android Boot Image
+base      - print or set address offset
+bdinfo    - print Board Info structure
+blkcache  - block cache diagnostics and control
+blkmap    - Composeable virtual block devices
+bmp       - manipulate BMP image data
+boot      - boot default, i.e., run 'bootcmd'
+bootd     - boot default, i.e., run 'bootcmd'
+bootefi   - Boots an EFI payload from memory
+bootelf   - Boot from an ELF image in memory
+bootflow  - Boot flows
+booti     - boot Linux kernel 'Image' format from memory
+bootm     - boot application image from memory
+bootmenu  - ANSI terminal bootmenu
+bootvx    - Boot vxWorks from an ELF image
+bootz     - boot Linux zImage image from memory
+btrsubvol - list subvolumes of a BTRFS filesystem
+button    - manage buttons
+clk       - CLK sub-system
+cmp       - memory compare
+coninfo   - print console devices and information
+cp        - memory copy
+crc32     - checksum calculation
+cyclic    - Cyclic
+dfu       - Device Firmware Upgrade
+dm        - Driver model low level access
+echo      - echo args to console
+editenv   - edit environment variable
+eficonfig - provide menu-driven UEFI variable maintenance interface
+env       - environment handling commands
+erofsload - load binary file from a EROFS filesystem
+erofsls   - List files in directory. Default: root (/).
+exit      - exit script
+ext2load  - load binary file from a Ext2 filesystem
+ext2ls    - list files in a directory (default /)
+ext4load  - load binary file from a Ext4 filesystem
+ext4ls    - list files in a directory (default /)
+ext4size  - determine a file's size
+ext4write - create a file in the root directory
+false     - do nothing, unsuccessfully
+fastboot  - run as a fastboot usb or udp device
+fatinfo   - print information about filesystem
+fatload   - load binary file from a dos filesystem
+fatls     - list files in a directory (default /)
+fatmkdir  - create a directory
+fatrm     - delete a file
+fatsize   - determine a file's size
+fatwrite  - write file into a dos filesystem
+fdt       - flattened device tree utility commands
+fsinfo    - print information about filesystems
+fsload    - load binary file from a filesystem image
+fsls      - list files in a directory (default /)
+fstype    - Look up a filesystem type
+fstypes   - List supported filesystem types
+fsuuid    - Look up a filesystem UUID
+go        - start application at address 'addr'
+gpio      - query and control gpio pins
+gzwrite   - unzip and write memory to block device
+help      - print command description/usage
+iminfo    - print header information for application image
+imxtract  - extract a part of a multi-image
+itest     - return true/false on integer compare
+lcdputs   - print string on video framebuffer
+ln        - Create a symbolic link
+load      - load binary file from a filesystem
+loadb     - load binary file over serial line (kermit mode)
+loads     - load S-Record file over serial line
+loadx     - load binary file over serial line (xmodem mode)
+loady     - load binary file over serial line (ymodem mode)
+loop      - infinite loop on address range
+ls        - list files in a directory (default /)
+lzmadec   - lzma uncompress a memory region
+md        - memory display
+mkdir     - create a directory
+mm        - memory modify (auto-incrementing address)
+mmc       - MMC sub system
+mmcinfo   - display MMC info
+mv        - rename/move a file/directory
+mw        - memory write (fill)
+nm        - memory modify (constant address)
+panic     - Panic with optional message
+part      - disk partition related commands
+pause     - delay until user input
+pinmux    - show pin-controller muxing
+printenv  - print environment variables
+random    - fill memory with random pattern
+reset     - Perform RESET of the CPU
+rm        - delete a file
+run       - run commands in an environment variable
+save      - save file to a filesystem
+scsi      - SCSI sub-system
+scsiboot  - boot from SCSI device
+setcurs   - set cursor position within screen
+setenv    - set environment variables
+setexpr   - set environment variable as the result of eval expression
+showvar   - print local hushshell variables
+size      - determine a file's size
+sleep     - delay execution for some time
+source    - run script from memory
+sqfsload  - load binary file from a SquashFS filesystem
+sqfsls    - List files in directory. Default: root (/).
+test      - minimal test like /bin/sh
+time      - run commands and summarize execution time
+true      - do nothing, successfully
+ufetch    - U-Boot fetch utility
+ums       - Use the UMS [USB Mass Storage]
+unlz4     - lz4 uncompress a memory region
+unzip     - unzip a memory region
+version   - print monitor, compiler and linker version
+zfsload   - load binary file from a ZFS filesystem
+zfsls     - list files in a directory (default /)
+=> 
+?         - alias for 'help'
+abootimg  - manipulate Android Boot Image
+base      - print or set address offset
+bdinfo    - print Board Info structure
+blkcache  - block cache diagnostics and control
+blkmap    - Composeable virtual block devices
+bmp       - manipulate BMP image data
+boot      - boot default, i.e., run 'bootcmd'
+bootd     - boot default, i.e., run 'bootcmd'
+bootefi   - Boots an EFI payload from memory
+bootelf   - Boot from an ELF image in memory
+bootflow  - Boot flows
+booti     - boot Linux kernel 'Image' format from memory
+bootm     - boot application image from memory
+bootmenu  - ANSI terminal bootmenu
+bootvx    - Boot vxWorks from an ELF image
+bootz     - boot Linux zImage image from memory
+btrsubvol - list subvolumes of a BTRFS filesystem
+button    - manage buttons
+clk       - CLK sub-system
+cmp       - memory compare
+coninfo   - print console devices and information
+cp        - memory copy
+crc32     - checksum calculation
+cyclic    - Cyclic
+dfu       - Device Firmware Upgrade
+dm        - Driver model low level access
+echo      - echo args to console
+editenv   - edit environment variable
+eficonfig - provide menu-driven UEFI variable maintenance interface
+env       - environment handling commands
+erofsload - load binary file from a EROFS filesystem
+erofsls   - List files in directory. Default: root (/).
+exit      - exit script
+ext2load  - load binary file from a Ext2 filesystem
+ext2ls    - list files in a directory (default /)
+ext4load  - load binary file from a Ext4 filesystem
+ext4ls    - list files in a directory (default /)
+ext4size  - determine a file's size
+ext4write - create a file in the root directory
+false     - do nothing, unsuccessfully
+fastboot  - run as a fastboot usb or udp device
+fatinfo   - print information about filesystem
+fatload   - load binary file from a dos filesystem
+fatls     - list files in a directory (default /)
+fatmkdir  - create a directory
+fatrm     - delete a file
+fatsize   - determine a file's size
+fatwrite  - write file into a dos filesystem
+fdt       - flattened device tree utility commands
+fsinfo    - print information about filesystems
+fsload    - load binary file from a filesystem image
+fsls      - list files in a directory (default /)
+fstype    - Look up a filesystem type
+fstypes   - List supported filesystem types
+fsuuid    - Look up a filesystem UUID
+go        - start application at address 'addr'
+gpio      - query and control gpio pins
+gzwrite   - unzip and write memory to block device
+help      - print command description/usage
+iminfo    - print header information for application image
+imxtract  - extract a part of a multi-image
+itest     - return true/false on integer compare
+lcdputs   - print string on video framebuffer
+ln        - Create a symbolic link
+load      - load binary file from a filesystem
+loadb     - load binary file over serial line (kermit mode)
+loads     - load S-Record file over serial line
+loadx     - load binary file over serial line (xmodem mode)
+loady     - load binary file over serial line (ymodem mode)
+loop      - infinite loop on address range
+ls        - list files in a directory (default /)
+lzmadec   - lzma uncompress a memory region
+md        - memory display
+mkdir     - create a directory
+mm        - memory modify (auto-incrementing address)
+mmc       - MMC sub system
+mmcinfo   - display MMC info
+mv        - rename/move a file/directory
+mw        - memory write (fill)
+nm        - memory modify (constant address)
+panic     - Panic with optional message
+part      - disk partition related commands
+pause     - delay until user input
+pinmux    - show pin-controller muxing
+printenv  - print environment variables
+random    - fill memory with random pattern
+reset     - Perform RESET of the CPU
+rm        - delete a file
+run       - run commands in an environment variable
+save      - save file to a filesystem
+scsi      - SCSI sub-system
+scsiboot  - boot from SCSI device
+setcurs   - set cursor position within screen
+setenv    - set environment variables
+setexpr   - set environment variable as the result of eval expression
+showvar   - print local hushshell variables
+size      - determine a file's size
+sleep     - delay execution for some time
+source    - run script from memory
+sqfsload  - load binary file from a SquashFS filesystem
+sqfsls    - List files in directory. Default: root (/).
+test      - minimal test like /bin/sh
+time      - run commands and summarize execution time
+true      - do nothing, successfully
+ufetch    - U-Boot fetch utility
+ums       - Use the UMS [USB Mass Storage]
+unlz4     - lz4 uncompress a memory region
+unzip     - unzip a memory region
+version   - print monitor, compiler and linker version
+zfsload   - load binary file from a ZFS filesystem
+zfsls     - list files in a directory (default /)
+=> bot   reset
+resetting ...
+ € €€   €   €   €         €           € €€   €€   €   €      €              €€€€         €€€€ € €€   €€   €   €      €             € €€   €€€  €                      € €€  €€€   €                       €€€€      €  €€€€ € €€      €                      € €€   € €€ €                   € €    €€€€        €€€€ € €€ € €   €       €               € €€ €€ €€ € €                       €€€€         €€€€ € €€ € €€€€  €     €€            € €    €€€€        €€€€ € €€ € €€ € €                       €€€€      €€€ €€€€ € €€  €€€   €               €    €    €€€€        €€€€€ € €€  €€€€   €                       €€€€  €      €€€€€€  €  €€€    €                  €€€ €€   €€€€  €    €  €€€€€€  €  €€€€   €         €€€    €   €  €    €€€€  €€€   €€€ €€€€€€  €  € €€€€€€€€€ €   €€€€€    €  € € €€  € €€ [PL_LOG_STORE: check once, sig value 0x227, addr 0x116000.
+PL_LOG_STORE:sram->sig value 0xABCD1234!
+SYST] CNTCV 0487808
+LASTPC "CPU0 pc=0x7BA863047A77D506"
+#T#DCM=27
+Pll init start...
+abist meter[51] = 257968 Khz
+[CPU_LL_FREQ] AD_ARMPLL_LL_CK = 1032 Mhz
+abist meter[51] = 168692 Khz
+[CCIPLL_FREQ] AD_CCIPLL_BL0_CK = 675 Mhz
+INFRACFG_AO_INFRA_BUS_DCM_CTRL: 0x787FE0, INFRACFG_AO_MODULE_CG_0: 0x0, INFRACFG_AO_MODULE_CG_1: 0x4400, INFRACFG_AO_MODULE_CG_2: 0x0, INFRACFG_AO_MODULE_CG_3: 0x1004000, INFRACFG_AO_MODULE_CG_4: 0x41000000, INFRACFG_AO_MODULE_SW_CG_5: 0x0, INFRACFG_AO_PERI_BUS_DCM_CTRL: 0x4787FE0
+APMIXED_AP_PLL_5: 0x32BF8
+disp mtcmos Start..
+disp mtcmos Done!
+MMSYS_CONFIG_MMSYS_CG_0: 0xFE848040, MMSYS_CONFIG_MMSYS_CG_2: 0xFFFFFBFE
+MDPSYS_CONFIG_MDPSYS_CG_0: 0xFFFF0030, MDPSYS_CONFIG_MDPSYS_CG_2: 0xFFFFFEFE
+Pll init Done!!
+#T#PLL=11
+#T#GPIO=0
+[RGU] rst from: TFA
+[RGU] STA from reg:       0x40000000
+[RGU] MODE:               0x25
+[RGU] STA:                0x40000000
+[RGU] LENGTH:             0xFFE0
+[RGU] INTERVAL:           0xFFF
+[RGU] SWSYSRST:           0x0
+[RGU] LATCH_CTL:          0x21E71
+[RGU] LATCH_CTL2:         0x0
+[RGU] NONRST_REG:         0x0
+[RGU] NONRST_REG2:        0x3C002000
+[RGU] REQ_MODE:           0x3F00F2
+[RGU] REQ_IRQ_EN:         0x3B00F0
+[RGU] DEBUG_CTL:          0x0
+[RGU] parse g_rgu_status: 2 (0x2)
+[RGU] Set NONRST_REG to 0x40000000
+[RGU] mtk_wdt_mode_config mode value=34, tmp:22000034
+[DOE_ENV]get_env apwdt_en
+[RGU] mtk_wdt_mode_config mode value=7D, tmp:2200007D
+[RGU] mtk_wdt_reset_deglitch_enable: MTK_WDT_RSTDEG_EN1(8000A357), MTK_WDT_RSTDEG_EN2(800067D2)
+[RGU] rgu_update_reg: 0, bits: 0xC000, addr: 0x10007040, val: 0x0
+[RGU] rgu_update_reg: 0, bits: 0x300, addr: 0x100070A0, val: 0x0
+[RGU] mtk_wdt_pre_init: MTK_WDT_DEBUG_CTL(0x0)
+[RGU] mtk_wdt_pre_init: MTK_WDT_DEBUG_CTL2(0x0)
+[RGU] mtk_wdt_pre_init: MTK_WDT_LATCH_CTL(0x21E71)
+[RGU] mtk_wdt_pre_init: MTK_WDT_REQ_MODE(3F00F2), MTK_WDT_REQ_IRQ_EN(3B00F0)
+#T#WDT_PRE=12
+RAM_CONSOLE wdt status 0x2
+#T#Ram console=0
+abist meter[37] = 240904 Khz
+abist meter[37] = 308340 Khz
+abist meter[37] = 270460 Khz
+abist meter[37] = 254616 Khz
+abist meter[37] = 262332 Khz
+abist meter[37] = 258576 Khz
+abist meter[37] = 261320 Khz
+abist meter[37] = 258476 Khz
+abist meter[37] = 261216 Khz
+abist meter[37] = 261116 Khz
+[PMIF] ULPOSC1 K done: 261M, PLL_ULPOSC1_CON0/1/2 0x3CA94A 0x2900 0x41
+[pmifclkmgr_set_spmi_clk] done
+[pmifclkmgr_set_spi_clk] done
+#T#PMIFCLKMGR=6
+[PWRAP] pwrap_init_preloader
+[PWRAP] is_pwrap_init_done 0
+[PWRAP] pwrap_init start!!!!!!!!!!!!!
+[PWRAP] Reset SPISLV ok
+[PWRAP] Set Read Dummy Cycle ok
+[PWRAP] _pwrap_init_dio ok
+[PWRAP] _pwrap_init_reg_clock ok
+[PWRAP] __pwrap_InitSPISLV ok
+[PWRAP] si_sampling_ck_dly = 0, si_sampling_ck_pol = 0
+[PWRAP] si_sample_ctrl = 0, rdata = D6A9
+[PWRAP] First Valid Sampling Clock Found!!!
+[PWRAP] si_sampling_ck_dly = 0, si_sampling_ck_pol = 1
+[PWRAP] si_sample_ctrl = 20, rdata = 5AA5
+[PWRAP] si_dly = 0, *RG_SPI_CON2 = 0, rdata = 1B27
+[PWRAP] si_dly = 1, *RG_SPI_CON2 = 1, rdata = 1B27
+[PWRAP] si_dly = 2, *RG_SPI_CON2 = 2, rdata = 1B27
+[PWRAP] si_dly = 3, *RG_SPI_CON2 = 3, rdata = 1B27
+[PWRAP] si_dly = 4, *RG_SPI_CON2 = 4, rdata = 1B27
+[PWRAP] si_dly = 5, *RG_SPI_CON2 = 5, rdata = 1B27
+[PWRAP] si_dly = 6, *RG_SPI_CON2 = 6, rdata = 1B27
+[PWRAP] Data Boundary is Found !!!
+[PWRAP] si_dly = 7, rdata = A24
+[PWRAP] si_sample_ctrl=0x20(before)
+[PWRAP] si_sample_ctrl=0x40(after)(non-FPGA)
+[PWRAP] SI Strobe Calibration For PMIC 0 Done
+[PWRAP] si_sample_ctrl = 40, si_dly = 7
+[PWRAP] _pwrap_init_sistrobe Read Test ok
+[PWRAP] _pwrap_init_sistrobe ok
+[PWRAP] _pwrap_lock_SPISLVReg ok
+[PWRAP] _pwrap_wacs2_write_test ok
+[PWRAP] Enable CRC ok
+[PWRAP] _pwrap_InitStaUpd ok
+[PWRAP] PMIF_SPI_PMIF_MPU_CTRL = 0x34
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_0_START = 0x600
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_0_END = 0x67E
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_0_PER = 0xFF3FFFFB
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_1_START = 0x800
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_1_END = 0x13FE
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_1_PER = 0xFFFCFFF8
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_2_START = 0x1400
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_2_END = 0x207E
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_2_PER = 0xFFFCFFF0
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_3_START = 0x2080
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_3_END = 0x26FE
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_3_PER = 0xFFFCFF38
+[PWRAP] _pwrap_config_mpu ok
+[PWRAP] start pwrap_read_test
+[PWRAP] rdata=0x5AA5
+[PWRAP] Read Test pass, return_value = 0x0
+[PWRAP] start pwrap_write_test
+[PWRAP] after pwrap_write_test
+[PWRAP] rdata=0xA55A (read back)
+[PWRAP] Write Test pass
+[PWRAP] channel pass
+[PWRAP] REC_CMD0:0x410 (The last one adr)
+[PWRAP] REC_WDATA0:0xA55A (The last one wdata)
+[PWRAP] REC_CMD1:0x1DA0 (The second-last adr)
+[PWRAP] REC_WDATA1:0xB (The second-last wdata)
+[PWRAP] REC_CMD2:0x1DA6 (The third-last adrs)
+[PWRAP] REC_WDATA2:0x0 (The third-last wdata)
+[PWRAP] enable spi debug ok
+[PWRAP] clear record command ok
+
+[PWRAP] PMIC_WRAP_MONITOR_MODE = Logging Mode
+[PWRAP] PMIF_SPI_PMIF_MONITOR_CTRL = 0x5
+[PWRAP] PMIF_SPI_PMIF_MONITOR_TARGET_CHAN_0 = 0x1FBFFF
+[PWRAP] PMIF_SPI_PMIF_MONITOR_TARGET_ADDR_0 = 0x0
+[PWRAP] PMIF_SPI_PMIF_MONITOR_TARGET_WDATA_0 = 0x0
+[PWRAP] init pass, ret=0.
+#T#PWRAP=31
+[TIA] trigger addr setup ok
+[TIA] trigger value setup ok
+[TIA] read back addr setup ok
+[TIA] delay setup ok
+[TIA] lock TIA_AUXADC register ok
+[TIA] TIA init done
+#T#TIA=2
+pmif_spmi_set_lp_mode bringup sleep legacy mode
+#T#SPMI_NO_SRCLKEN_RC=0
+Current RTC time:[2010/1/1 0:9:1]
+#T#I2C=0
+0:0x4000, 1:0x0, 2:0x0, 3:0x102, 4:0x1, STA:0x0, S:0x1, FAB0:0x0, FAB11:0x0
+s4: 0x1
+[PL] spare4 = 0x1
+[PL] segment = 0x1
+DATE_CODE_YY:0, DATE_CODE_WW:0
+[SegCode] Segment Code:0x1, PROJECT_CODE:0x0, FAB_CODE:0x0, RW_STA:0x0, CTL:0x0, DCM:0x7
+#T#DEVINFO=3
+[PMIC]Preloader Start
+[PMIC] CHIP Code = 0x6610
+[PMIC]POWER_HOLD :0x1
+[PMIC]TOP_RST_STATUS[0x152]=0x48
+[PMIC]PONSTS[0xC]=0x0
+[PMIC]POFFSTS[0xE]=0x400
+[PMIC]PG_SDN_STS0[0x16]=0xFFFF
+[PMIC]PG_SDN_STS1[0x18]=0xFF00
+[PMIC]OC_SDN_STS0[0x1A]=0x0
+[PMIC]BUCK_OC_SDN_STATUS[0x1332]=0x0
+[PMIC]BUCK_OC_SDN_EN[0x1346]=0x1FF
+[PMIC]THERMALSTATUS[0x1C]=0x0
+[PMIC]STRUP_CON4[0xA1C]=0x0
+[PMIC]TOP_RST_MISC[0x14C]=0x204
+[PMIC]TOP_CLK_TRIM[0x388]=0x6AC0
+latch VSRAM_PROC11 906250 uV(0x61)
+latch VSRAM_PROC12 750000 uV(0x3C)
+latch VPROC11 806250 uV(0x29)
+latch VPROC12 618750 uV(0x1A)
+latch VSRAM_CORE 825000 uV(0x2E)
+latch VCORE 725000 uV(0x36)
+latch VSRAM_OTHERS 750000 uV(0x3C)
+latch VMODEM 825000 uV(0x2E)
+latch VSRAM_GPU 850000 uV(0x24)
+latch VGPU 850000 uV(0x24)
+[pmic_check_rst] AP Watchdog
+[PMIC]just_rst = 0
+[pwrkey_dbg_status] powerkey:0 count=0(ms) g_pwrkey_release=0
+[pmic_wdt_set] TOP_RST_MISC=0x225
+mtk_subpmic_init (1.0.3_MTK)
+rt9471_enable_autoaicr en = 0
+rt9471_set_wdt time = 0(0x00000000)
+rt9471_set_cv cv = 4400000(0x00000032)
+rt9471_set_vac_ovp vac_ovp = 14000000(0x00000003)
+rt9471_enable_bc12 en = 0
+rt9471_enable_bc12 en = 1
+[PMIC]Init done
+#T#PMIC=14
+pl_chgpump_reset start!
+hl7138_check_devinfo chip_id(10), type(standalone)
+hl7138_get_dp_dm dp(0) dm(0) ret:0
+hl7138_rfc_reset rfc_usb_switch_gpio(155)
+hl7138_rfc_reset done(0)
+pl_chgpump_reset done(0)
+Enter mtk_kpd_gpio_set! 
+SEAN TEST no key
+====> GZ (0)[    5.307767]Version of MTEE: mTEE_SDK: 2.2.2.004.S0MP1, Built: 16:05:09 Oct 17 2022
+
+Say Hello from EL2!
+
+MIDR: 412fd050, MPIDR: 81000000
+CPU Core: 0!
+GZ Platform: MTK_ARMV8
+Memory base: 0x846c00000, size: 0x1200000
+lk_init 0x3805c808-0x3805cbe0=984
+48600000 48600000 5920 11002000 in lk_main
+====> GZ (0)[    0.002368]Version of GZ-CORE: GZ_CORE_hypervisor: 3.2.0.050.S0MP1, Built: 16:05:06 Oct 17 2022
+====> GZ (0)[    0.003579]platform_init_mmu_mappings membase: 0x846c00000
+====> GZ (0)[    0.004392]platform_init_mmu_mappings memsize: 0x1200000
+====> GZ (0)[    0.005184]platform_init_mmu_mappings kernel offset: 0x38000000
+====> GZ (0)[    0.006051]platform_init_mmu_mappings ram phys: 0x87ec00000
+====> GZ (0)[    0.006876]platform_init_mmu_mappings ram size: 1200000
+====> GZ (0)[    0.007695]INIT: cpu 0, calling hook 0x38009254 (libvmm_early) at level 0x10000, flags 0x1
+
+welcome to lk/MP
+
+boot args 0x48600000 0x48600000 0x5920 0x11002000
+calling constructors
+initializing heap
+====> GZ (0)[    0.010063]INIT: cpu 0, calling hook 0x380400f8 (vm_preheap) at level 0x3ffff, flags 0x1
+====> GZ (0)[    0.011297]base 0x382fa000 size 8192 bytes, heap_grow_sz:8192
+====> GZ (0)[    0.012120]base 0x382fc000 size 4096 bytes, heap_grow_sz:4096
+initializing kernel
+====> GZ (0)[    0.013188]INIT: cpu 0, calling hook 0x3800b570 (plat_sip_smc_ver) at level 0x50000, flags 0x1
+====> GZ (0)[    0.014393]plat_sip_smc_version_init sip ver, major=0xffffffff, minor=0x0
+====> GZ (0)[    0.015368]plat_sip_smc_version_init sip smc remaked is supported!
+====> GZ (0)[    0.016268]INIT: cpu 0, calling hook 0x38040150 (vm) at level 0x50000, flags 0x1
+====> GZ (0)[    0.017325]INIT: cpu 0, calling hook 0x380093bc (libvmm) at level 0x50001, flags 0x1
+====> GZ (0)[    0.018427]get_parameter_from_atag:281 new boot tag version detected!
+====> GZ (0)[    0.019349][platform_set_boot_mode]:gz boot mode is 1 
+====> GZ (0)[    0.020123]platform_set_boot_info BOOT_TAG_IS_ABNORMAL_BOOT found=0x0!
+
+
+U-Boot 2025.10-rc5-gde42d185f304 (Jul 11 2026 - 00:31:23 +0300) mt6878-tetris
+
+Model: Infinix Note 12 Pro (X676B)
+DRAM:  4 GiB (total 8 GiB)
+Core:  34 devices, 18 uclasses, devicetree: embed
+WDT:   Started watchdog@10007000 with servicing every 1000ms (60s timeout)
+MMC:   drivers/mmc/mmc.c:3176-           mmc_probe() mmc@11240000 - probe failed: -61
+
+Loading Environment from nowhere... OK
+In:    serial,button-kbd
+Out:   serial,vidconsole
+Err:   serial,vidconsole
+[?25h
+
+Reset SCSI
+scanning bus for devices...
+ti-syscon reset: probed 4 controls
+drivers/ufs/ufs.c:587-   ufshcd_hba_enable() mediatek-ufshci ufshci@11270000: Controller enable failed
+drivers/ufs/ufs.c:2011-        ufshcd_probe() mediatek-ufshci ufshci@11270000: Host controller enable failed
+drivers/ufs/ufs-mediatek.c:435-       ufs_mtk_probe() mediatek-ufshci ufshci@11270000: ufshcd_probe() failed, ret:-5
+scanning bus for devices...
+Resetting UFS Controller (To Secure Reset mode)!
+drivers/ufs/ufs.c:121-ufshcd_print_pwr_info() mediatek-ufshci ufshci@11270000: [RX, TX]: gear=[3, 3], lane[2, 2], pwr[FAST MODE, FAST MODE], rate = 2
+  Device 0: (0:0) Vendor: SKhynix Prod.: H9QT1G6DN6X132 Rev: A002
+            Type: Hard Disk
+            Capacity: 4.0 MB = 0.0 GB (1024 x 4096)
+  Device 1: (0:1) Vendor: SKhynix Prod.: H9QT1G6DN6X132 Rev: A002
+            Type: Hard Disk
+            Capacity: 4.0 MB = 0.0 GB (1024 x 4096)
+  Device 2: (0:2) Vendor: SKhynix Prod.: H9QT1G6DN6X132 Rev: A002
+            Type: Hard Disk
+            Capacity: 244064.0 MB = 238.3 GB (62480384 x 4096)
+
+Device 2: (0:2) Vendor: SKhynix Prod.: H9QT1G6DN6X132 Rev: A002
+            Type: Hard Disk
+            Capacity: 244064.0 MB = 238.3 GB (62480384 x 4096)
+... is now current device
+Created "root"
+Block 0x0+0x38e97fb mapped to block 0x2ab800 of "scsi 2"
+Unknown command 'usb' - try 'help'
+Hit any key to stop autoboot:  0 
+[?25l[2J[1;1H[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H[7m1. Fastboot USB[0m[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H[7m2. Boot Android[0m[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H[7m3. Enable serial console gadget[0m[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[?25h[2J[1;1HMUSB: PHY probed OK
+MTK MUSB OTG (Peripheral)
+USB PHY: reg318=00100442 reg320=0004001a reg368=02000000 reg36c=00003f2f
+MUSB: PHY probed OK
+musb-hdrc: peripheral reset irq lost!
+USB serial console active. Connect /dev/ttyACM0 on PC
+Press Ctrl+A then X to exit picocom
+=> 
