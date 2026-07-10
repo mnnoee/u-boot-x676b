@@ -1,0 +1,144 @@
+ufetch
+[34m[1m                  ......::......                     drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: compatible: infinix,x676b
+[0minfinix,x676b
+[34m[1m             ...::::::::::::::::::...                -------------
+[34m[1m          ..::::::::::::::::::::::::::..             Kernel:[0m U-Boot 2025.10-rc5-g861209170292
+[34m[1m        .::::.:::::::::::::::...::::.::::.           Config:[0m mt6789_defconfig
+[34m[1m      .::::::::::::::::::::..::::::::::::::.         drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: model: Infinix Note 12 Pro (X676B)
+Host:[0m Infinix Note 12 Pro (X676B)
+[34m[1m    .::.:::::::::::::::::::[33m=*%#*[34m::::::::::.::.       Uptime:[0m 336 seconds
+[34m[1m   .:::::::::::::::::.....[33m*%%*-[34m:....::::::::::.      IP Address:[0m none
+[34m[1m  .:.:::...:::::::::.:-[33m===##*---==-[34m::::::::::.:.     Commands:[0m 112 (help)
+[34m[1m .::::..::::........[33m-***#****###****-[34m...::::::.:.    Consoles:[0m serial (921600 baud)
+[34m[1m ::.:.-[33m+***+=[34m::-[33m=+**#%%%%%%%%%%%%###*= [34m-::...::::.   Features:[0m , EFI
+[34m[1m.:.::-[33m*****###%%%%%%%%%%%%%%%%%%%%%%%%%%#*=[34m:..::::   Relocated:[0m to 0x13feb9000
+[34m[1m.::[33m##[34m:[33m***#%%%%%%#####%%%%%%%####%%%%%####%%%*[34m-.::.   CPU: [0marm (8 cores, 1 in use)
+[34m[1m:.:[33m#%[34m::[33m*%%%%%%%#*****##%%%#*****##%%##*****#%%+[34m.::.  Memory:[0m 8 GiB
+[34m[1m.::[33m**==#%%%%%%%##****#%%%%##****#%%%%#****###%%[34m:..   drivers/core/uclass.c:346-uclass_find_device_by_seq() 0
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:357-uclass_find_device_by_seq()    - found
+ mmc 0: [0mNo media
+[34m[1m..:[33m#%[34m::[33m*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%+ [34m.:.  drivers/core/uclass.c:346-uclass_find_device_by_seq() 1
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:357-uclass_find_device_by_seq()    - found
+scsi 0: [0m4 MiB
+[34m[1m ::[33m##[34m:[33m+**#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%* [34m-.::   drivers/core/uclass.c:346-uclass_find_device_by_seq() 2
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 2 'ufs_scsi.id0lun1'
+drivers/core/uclass.c:357-uclass_find_device_by_seq()    - found
+scsi 1: [0m4 MiB
+[34m[1m ..::-[33m#****#%#%%%%%%%%%%%%%%%%%%%%%%%%%%#*=[34m-..::.    drivers/core/uclass.c:346-uclass_find_device_by_seq() 3
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 2 'ufs_scsi.id0lun1'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 3 'ufs_scsi.id0lun2'
+drivers/core/uclass.c:357-uclass_find_device_by_seq()    - found
+scsi 2: [0m238.3 GiB
+[34m[1m  ...:=[33m*****=[34m::-[33m=+**###%%%%%%%%###**+=  [34m--:...:::    drivers/core/uclass.c:346-uclass_find_device_by_seq() 4
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 2 'ufs_scsi.id0lun1'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 3 'ufs_scsi.id0lun2'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 4 'blkmap-root.blk'
+drivers/core/uclass.c:357-uclass_find_device_by_seq()    - found
+blkmap 0: [0m227.6 GiB
+[34m[1m   .::.::--:........::::::--::::::......::::::.      drivers/core/uclass.c:346-uclass_find_device_by_seq() 5
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 2 'ufs_scsi.id0lun1'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 3 'ufs_scsi.id0lun2'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 4 'blkmap-root.blk'
+drivers/core/uclass.c:361-uclass_find_device_by_seq()    - not found
+
+[34m[1m    .::.....::::::::::...........:::::::::.::.       drivers/core/uclass.c:346-uclass_find_device_by_seq() 6
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 2 'ufs_scsi.id0lun1'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 3 'ufs_scsi.id0lun2'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 4 'blkmap-root.blk'
+drivers/core/uclass.c:361-uclass_find_device_by_seq()    - not found
+
+[34m[1m      .::::::::::::::::::::::::::::::::::::.         drivers/core/uclass.c:346-uclass_find_device_by_seq() 7
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 2 'ufs_scsi.id0lun1'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 3 'ufs_scsi.id0lun2'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 4 'blkmap-root.blk'
+drivers/core/uclass.c:361-uclass_find_device_by_seq()    - not found
+
+[34m[1m        .::::.::::::::::::::::::::::.::::.           drivers/core/uclass.c:346-uclass_find_device_by_seq() 8
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 2 'ufs_scsi.id0lun1'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 3 'ufs_scsi.id0lun2'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 4 'blkmap-root.blk'
+drivers/core/uclass.c:361-uclass_find_device_by_seq()    - not found
+
+[34m[1m          ..::::::::::::::::::::::::::..             drivers/core/uclass.c:346-uclass_find_device_by_seq() 9
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 2 'ufs_scsi.id0lun1'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 3 'ufs_scsi.id0lun2'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 4 'blkmap-root.blk'
+drivers/core/uclass.c:361-uclass_find_device_by_seq()    - not found
+
+[34m[1m             ...::::::::::::::::::...                drivers/core/uclass.c:346-uclass_find_device_by_seq() 10
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 2 'ufs_scsi.id0lun1'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 3 'ufs_scsi.id0lun2'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 4 'blkmap-root.blk'
+drivers/core/uclass.c:361-uclass_find_device_by_seq()    - not found
+
+[34m[1m                  ......::......                     drivers/core/uclass.c:346-uclass_find_device_by_seq() 11
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'mmc@11240000.blk'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 1 'ufs_scsi.id0lun0'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 2 'ufs_scsi.id0lun1'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 3 'ufs_scsi.id0lun2'
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 4 'blkmap-root.blk'
+drivers/core/uclass.c:361-uclass_find_device_by_seq()    - not found
+
+[0m
+
+=> md.b 0x11f40000 0x80
+11f40000: 20 00 00 00 01 00 1f 00 00 00 00 00 00 1f 00 00   ...............
+11f40010: 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00  ................
+11f40020: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11f40030: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11f40040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11f40050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11f40060: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11f40070: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+=> md.b 0x11200000 0x40
+11200000: 00 a0 00 00 00 00 ff 00 fe 00 00 f7 cd 00 00 00  ................
+11200010: 00 00 00 00 00 00 00 00 00 00 00 00 00 08 88 1f  ................
+11200020: 80 00 00 00 f4 00 00 00 fc 00 00 00 d4 00 00 00  ................
+11200030: 4a 00 00 00 07 00 00 00 44 00 00 00 7b 00 00 00  J.......D...{...
+=> fastboot 0 usb 0
+MUSB: PHY probed OK
+drivers/core/uclass.c:346-uclass_find_device_by_seq() 0
+drivers/core/uclass.c:354-uclass_find_device_by_seq()    - 0 'usb0@11200000'
+drivers/core/uclass.c:357-uclass_find_device_by_seq()    - found
+drivers/usb/musb-new/musb_core.c:911-          musb_start() <== devctl 98
+drivers/usb/musb-new/musb_gadget.c:1720-         musb_pullup() gadget D+ pullup on
+drivers/usb/musb-new/musb_gadget.c:1720-         musb_pullup() gadget D+ pullup off
+=> md.b 0x11200080 0x20
+11200080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11200090: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+=> md.b 0x11f40000 0x80
+11f40000: 20 00 00 00 01 00 1f 00 00 00 00 00 00 1f 00 00   ...............
+11f40010: 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00  ................
+11f40020: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11f40030: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11f40040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11f40050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11f40060: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+11f40070: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+=> md.b 0x11200000 0x40
+11200000: 00 a0 00 00 00 00 ff 00 fe 00 00 f7 cd 00 00 00  ................
+11200010: 00 00 00 00 00 00 00 00 00 00 00 00 00 08 88 1f  ................
+11200020: 80 00 00 00 d0 00 00 00 77 00 00 00 e3 00 00 00  ........w.......
+11200030: 76 00 00 00 d2 00 00 00 aa 00 00 00 90 00 00 00  v...............
+=> 
