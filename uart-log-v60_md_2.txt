@@ -1,0 +1,441 @@
+help
+?         - alias for 'help'
+abootimg  - manipulate Android Boot Image
+base      - print or set address offset
+bdinfo    - print Board Info structure
+blkcache  - block cache diagnostics and control
+blkmap    - Composeable virtual block devices
+bmp       - manipulate BMP image data
+boot      - boot default, i.e., run 'bootcmd'
+bootd     - boot default, i.e., run 'bootcmd'
+bootefi   - Boots an EFI payload from memory
+bootelf   - Boot from an ELF image in memory
+bootflow  - Boot flows
+booti     - boot Linux kernel 'Image' format from memory
+bootm     - boot application image from memory
+bootmenu  - ANSI terminal bootmenu
+bootvx    - Boot vxWorks from an ELF image
+bootz     - boot Linux zImage image from memory
+btrsubvol - list subvolumes of a BTRFS filesystem
+button    - manage buttons
+clk       - CLK sub-system
+cmp       - memory compare
+coninfo   - print console devices and information
+cp        - memory copy
+crc32     - checksum calculation
+cyclic    - Cyclic
+dfu       - Device Firmware Upgrade
+dm        - Driver model low level access
+echo      - echo args to console
+editenv   - edit environment variable
+eficonfig - provide menu-driven UEFI variable maintenance interface
+env       - environment handling commands
+erofsload - load binary file from a EROFS filesystem
+erofsls   - List files in directory. Default: root (/).
+exit      - exit script
+ext2load  - load binary file from a Ext2 filesystem
+ext2ls    - list files in a directory (default /)
+ext4load  - load binary file from a Ext4 filesystem
+ext4ls    - list files in a directory (default /)
+ext4size  - determine a file's size
+ext4write - create a file in the root directory
+false     - do nothing, unsuccessfully
+fastboot  - run as a fastboot usb or udp device
+fatinfo   - print information about filesystem
+fatload   - load binary file from a dos filesystem
+fatls     - list files in a directory (default /)
+fatmkdir  - create a directory
+fatrm     - delete a file
+fatsize   - determine a file's size
+fatwrite  - write file into a dos filesystem
+fdt       - flattened device tree utility commands
+fsinfo    - print information about filesystems
+fsload    - load binary file from a filesystem image
+fsls      - list files in a directory (default /)
+fstype    - Look up a filesystem type
+fstypes   - List supported filesystem types
+fsuuid    - Look up a filesystem UUID
+go        - start application at address 'addr'
+gpio      - query and control gpio pins
+gzwrite   - unzip and write memory to block device
+help      - print command description/usage
+iminfo    - print header information for application image
+imxtract  - extract a part of a multi-image
+itest     - return true/false on integer compare
+lcdputs   - print string on video framebuffer
+ln        - Create a symbolic link
+load      - load binary file from a filesystem
+loadb     - load binary file over serial line (kermit mode)
+loads     - load S-Record file over serial line
+loadx     - load binary file over serial line (xmodem mode)
+loady     - load binary file over serial line (ymodem mode)
+loop      - infinite loop on address range
+ls        - list files in a directory (default /)
+lzmadec   - lzma uncompress a memory region
+md        - memory display
+mkdir     - create a directory
+mm        - memory modify (auto-incrementing address)
+mmc       - MMC sub system
+mmcinfo   - display MMC info
+mv        - rename/move a file/directory
+mw        - memory write (fill)
+nm        - memory modify (constant address)
+panic     - Panic with optional message
+part      - disk partition related commands
+pause     - delay until user input
+pinmux    - show pin-controller muxing
+printenv  - print environment variables
+random    - fill memory with random pattern
+reset     - Perform RESET of the CPU
+rm        - delete a file
+run       - run commands in an environment variable
+save      - save file to a filesystem
+scsi      - SCSI sub-system
+scsiboot  - boot from SCSI device
+setcurs   - set cursor position within screen
+setenv    - set environment variables
+setexpr   - set environment variable as the result of eval expression
+showvar   - print local hushshell variables
+size      - determine a file's size
+sleep     - delay execution for some time
+source    - run script from memory
+sqfsload  - load binary file from a SquashFS filesystem
+sqfsls    - List files in directory. Default: root (/).
+test      - minimal test like /bin/sh
+time      - run commands and summarize execution time
+true      - do nothing, successfully
+ufetch    - U-Boot fetch utility
+ums       - Use the UMS [USB Mass Storage]
+unlz4     - lz4 uncompress a memory region
+unzip     - unzip a memory region
+version   - print monitor, compiler and linker version
+zfsload   - load binary file from a ZFS filesystem
+zfsls     - list files in a directory (default /)
+=> 
+?         - alias for 'help'
+abootimg  - manipulate Android Boot Image
+base      - print or set address offset
+bdinfo    - print Board Info structure
+blkcache  - block cache diagnostics and control
+blkmap    - Composeable virtual block devices
+bmp       - manipulate BMP image data
+boot      - boot default, i.e., run 'bootcmd'
+bootd     - boot default, i.e., run 'bootcmd'
+bootefi   - Boots an EFI payload from memory
+bootelf   - Boot from an ELF image in memory
+bootflow  - Boot flows
+booti     - boot Linux kernel 'Image' format from memory
+bootm     - boot application image from memory
+bootmenu  - ANSI terminal bootmenu
+bootvx    - Boot vxWorks from an ELF image
+bootz     - boot Linux zImage image from memory
+btrsubvol - list subvolumes of a BTRFS filesystem
+button    - manage buttons
+clk       - CLK sub-system
+cmp       - memory compare
+coninfo   - print console devices and information
+cp        - memory copy
+crc32     - checksum calculation
+cyclic    - Cyclic
+dfu       - Device Firmware Upgrade
+dm        - Driver model low level access
+echo      - echo args to console
+editenv   - edit environment variable
+eficonfig - provide menu-driven UEFI variable maintenance interface
+env       - environment handling commands
+erofsload - load binary file from a EROFS filesystem
+erofsls   - List files in directory. Default: root (/).
+exit      - exit script
+ext2load  - load binary file from a Ext2 filesystem
+ext2ls    - list files in a directory (default /)
+ext4load  - load binary file from a Ext4 filesystem
+ext4ls    - list files in a directory (default /)
+ext4size  - determine a file's size
+ext4write - create a file in the root directory
+false     - do nothing, unsuccessfully
+fastboot  - run as a fastboot usb or udp device
+fatinfo   - print information about filesystem
+fatload   - load binary file from a dos filesystem
+fatls     - list files in a directory (default /)
+fatmkdir  - create a directory
+fatrm     - delete a file
+fatsize   - determine a file's size
+fatwrite  - write file into a dos filesystem
+fdt       - flattened device tree utility commands
+fsinfo    - print information about filesystems
+fsload    - load binary file from a filesystem image
+fsls      - list files in a directory (default /)
+fstype    - Look up a filesystem type
+fstypes   - List supported filesystem types
+fsuuid    - Look up a filesystem UUID
+go        - start application at address 'addr'
+gpio      - query and control gpio pins
+gzwrite   - unzip and write memory to block device
+help      - print command description/usage
+iminfo    - print header information for application image
+imxtract  - extract a part of a multi-image
+itest     - return true/false on integer compare
+lcdputs   - print string on video framebuffer
+ln        - Create a symbolic link
+load      - load binary file from a filesystem
+loadb     - load binary file over serial line (kermit mode)
+loads     - load S-Record file over serial line
+loadx     - load binary file over serial line (xmodem mode)
+loady     - load binary file over serial line (ymodem mode)
+loop      - infinite loop on address range
+ls        - list files in a directory (default /)
+lzmadec   - lzma uncompress a memory region
+md        - memory display
+mkdir     - create a directory
+mm        - memory modify (auto-incrementing address)
+mmc       - MMC sub system
+mmcinfo   - display MMC info
+mv        - rename/move a file/directory
+mw        - memory write (fill)
+nm        - memory modify (constant address)
+panic     - Panic with optional message
+part      - disk partition related commands
+pause     - delay until user input
+pinmux    - show pin-controller muxing
+printenv  - print environment variables
+random    - fill memory with random pattern
+reset     - Perform RESET of the CPU
+rm        - delete a file
+run       - run commands in an environment variable
+save      - save file to a filesystem
+scsi      - SCSI sub-system
+scsiboot  - boot from SCSI device
+setcurs   - set cursor position within screen
+setenv    - set environment variables
+setexpr   - set environment variable as the result of eval expression
+showvar   - print local hushshell variables
+size      - determine a file's size
+sleep     - delay execution for some time
+source    - run script from memory
+sqfsload  - load binary file from a SquashFS filesystem
+sqfsls    - List files in directory. Default: root (/).
+test      - minimal test like /bin/sh
+time      - run commands and summarize execution time
+true      - do nothing, successfully
+ufetch    - U-Boot fetch utility
+ums       - Use the UMS [USB Mass Storage]
+unlz4     - lz4 uncompress a memory region
+unzip     - unzip a memory region
+version   - print monitor, compiler and linker version
+zfsload   - load binary file from a ZFS filesystem
+zfsls     - list files in a directory (default /)
+=> mw.b 0x11f40018 0x75 
+=> md.b 0x11f40018 0x04
+11f40018: 00 00 00 00                                      ....
+=> md.b 0x11f40018 0x04                    mw.b 0x11f40018 0x75 
+=> mw.b 0x11f40018 0x75 
+=> mw.b 0x11f40018 0x75 
+=> mw.b 0x11f40018 0x75                      mw.b 0x11f40018 0x75                      mw.b 0x11f40018 0x75                      md.b 0x11f40018 0x04
+11f40018: 00 00 00 00                                      ....
+=> mw.b 0x11f4001c 0xAA
+=> md.b 0x11f4001c 0x04
+11f4001c: 00 00 00 00                                      ....
+=> mw.b 0x11f40020 0xBB
+=> md.b 0x11f40020 0x04
+11f40020: 00 00 00 00                                      ....
+=> reset
+resetting ...
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: assigned-clock-rates: <not found>
+drivers/core/ofnode.c:540-    ofnode_read_prop() ofnode_read_prop: method: smc
+common/event.c:116-      notify_dynamic() Sending event 5/(unknown) to spy 'efi_disk add'
+ € €€   €   €   €         €           € €€   €€   €   €      €              €€€€         €€€€ € €€   €€   €   €      €             € €€   €€€  €                      € €€  €€€   €                       €€€€      €  €€€€ € €€      €                      € €€   € €€ €                   € €    €€€€        €€€€ € €€ € €   €       €               € €€ €€ €€ € €                       €€€€         €€€€ € €€ € €€€€  €     €€            € €    €€€€        €€€€ € €€ € €€ € €                       €€€€      €€€ €€€€ € €€  €€€   €               €    €    €€€€        €€€€€ € €€  €€€€   €                       €€€€  €      €€€€€€  €  €€€    €                  €€€ €€   €€€€  €    €  €€€€€€  €  €€€€   €         €€€    €   €  €    €€€€  €€€   €€€ €€€€€€  €  € €€€€€€€€€ €   €€€€€    €  € € €€  € €€ [PL_LOG_STORE: check once, sig value 0x227, addr 0x116000.
+PL_LOG_STORE:sram->sig value 0xABCD1234!
+SYST] CNTCV 0487B8F
+LASTPC "CPU0 pc=0x7BA843017A77D106"
+#T#DCM=27
+Pll init start...
+abist meter[51] = 257968 Khz
+[CPU_LL_FREQ] AD_ARMPLL_LL_CK = 1032 Mhz
+abist meter[51] = 168692 Khz
+[CCIPLL_FREQ] AD_CCIPLL_BL0_CK = 675 Mhz
+INFRACFG_AO_INFRA_BUS_DCM_CTRL: 0x787FE0, INFRACFG_AO_MODULE_CG_0: 0x0, INFRACFG_AO_MODULE_CG_1: 0x4400, INFRACFG_AO_MODULE_CG_2: 0x0, INFRACFG_AO_MODULE_CG_3: 0x1004000, INFRACFG_AO_MODULE_CG_4: 0x41000000, INFRACFG_AO_MODULE_SW_CG_5: 0x0, INFRACFG_AO_PERI_BUS_DCM_CTRL: 0x4787FE0
+APMIXED_AP_PLL_5: 0x32BF8
+disp mtcmos Start..
+disp mtcmos Done!
+MMSYS_CONFIG_MMSYS_CG_0: 0xFE848040, MMSYS_CONFIG_MMSYS_CG_2: 0xFFFFFBFE
+MDPSYS_CONFIG_MDPSYS_CG_0: 0xFFFF0030, MDPSYS_CONFIG_MDPSYS_CG_2: 0xFFFFFEFE
+Pll init Done!!
+#T#PLL=11
+#T#GPIO=0
+[RGU] rst from: TFA
+[RGU] STA from reg:       0x40000000
+[RGU] MODE:               0x25
+[RGU] STA:                0x40000000
+[RGU] LENGTH:             0xFFE0
+[RGU] INTERVAL:           0xFFF
+[RGU] SWSYSRST:           0x0
+[RGU] LATCH_CTL:          0x21E71
+[RGU] LATCH_CTL2:         0x0
+[RGU] NONRST_REG:         0x0
+[RGU] NONRST_REG2:        0x3C002000
+[RGU] REQ_MODE:           0x3F00F2
+[RGU] REQ_IRQ_EN:         0x3B00F0
+[RGU] DEBUG_CTL:          0x0
+[RGU] parse g_rgu_status: 2 (0x2)
+[RGU] Set NONRST_REG to 0x40000000
+[RGU] mtk_wdt_mode_config mode value=34, tmp:22000034
+[DOE_ENV]get_env apwdt_en
+[RGU] mtk_wdt_mode_config mode value=7D, tmp:2200007D
+[RGU] mtk_wdt_reset_deglitch_enable: MTK_WDT_RSTDEG_EN1(8000A357), MTK_WDT_RSTDEG_EN2(800067D2)
+[RGU] rgu_update_reg: 0, bits: 0xC000, addr: 0x10007040, val: 0x0
+[RGU] rgu_update_reg: 0, bits: 0x300, addr: 0x100070A0, val: 0x0
+[RGU] mtk_wdt_pre_init: MTK_WDT_DEBUG_CTL(0x0)
+[RGU] mtk_wdt_pre_init: MTK_WDT_DEBUG_CTL2(0x0)
+[RGU] mtk_wdt_pre_init: MTK_WDT_LATCH_CTL(0x21E71)
+[RGU] mtk_wdt_pre_init: MTK_WDT_REQ_MODE(3F00F2), MTK_WDT_REQ_IRQ_EN(3B00F0)
+#T#WDT_PRE=12
+RAM_CONSOLE wdt status 0x2
+#T#Ram console=0
+abist meter[37] = 241004 Khz
+abist meter[37] = 308444 Khz
+abist meter[37] = 270460 Khz
+abist meter[37] = 254512 Khz
+abist meter[37] = 262232 Khz
+abist meter[37] = 258476 Khz
+abist meter[37] = 261320 Khz
+abist meter[37] = 258476 Khz
+abist meter[37] = 261216 Khz
+abist meter[37] = 261216 Khz
+[PMIF] ULPOSC1 K done: 261M, PLL_ULPOSC1_CON0/1/2 0x3CA94A 0x2900 0x41
+[pmifclkmgr_set_spmi_clk] done
+[pmifclkmgr_set_spi_clk] done
+#T#PMIFCLKMGR=6
+[PWRAP] pwrap_init_preloader
+[PWRAP] is_pwrap_init_done 0
+[PWRAP] pwrap_init start!!!!!!!!!!!!!
+[PWRAP] Reset SPISLV ok
+[PWRAP] Set Read Dummy Cycle ok
+[PWRAP] _pwrap_init_dio ok
+[PWRAP] _pwrap_init_reg_clock ok
+[PWRAP] __pwrap_InitSPISLV ok
+[PWRAP] si_sampling_ck_dly = 0, si_sampling_ck_pol = 0
+[PWRAP] si_sample_ctrl = 0, rdata = D6A9
+[PWRAP] First Valid Sampling Clock Found!!!
+[PWRAP] si_sampling_ck_dly = 0, si_sampling_ck_pol = 1
+[PWRAP] si_sample_ctrl = 20, rdata = 5AA5
+[PWRAP] si_dly = 0, *RG_SPI_CON2 = 0, rdata = 1B27
+[PWRAP] si_dly = 1, *RG_SPI_CON2 = 1, rdata = 1B27
+[PWRAP] si_dly = 2, *RG_SPI_CON2 = 2, rdata = 1B27
+[PWRAP] si_dly = 3, *RG_SPI_CON2 = 3, rdata = 1B27
+[PWRAP] si_dly = 4, *RG_SPI_CON2 = 4, rdata = 1B27
+[PWRAP] si_dly = 5, *RG_SPI_CON2 = 5, rdata = 1B27
+[PWRAP] si_dly = 6, *RG_SPI_CON2 = 6, rdata = 1B27
+[PWRAP] Data Boundary is Found !!!
+[PWRAP] si_dly = 7, rdata = A24
+[PWRAP] si_sample_ctrl=0x20(before)
+[PWRAP] si_sample_ctrl=0x40(after)(non-FPGA)
+[PWRAP] SI Strobe Calibration For PMIC 0 Done
+[PWRAP] si_sample_ctrl = 40, si_dly = 7
+[PWRAP] _pwrap_init_sistrobe Read Test ok
+[PWRAP] _pwrap_init_sistrobe ok
+[PWRAP] _pwrap_lock_SPISLVReg ok
+[PWRAP] _pwrap_wacs2_write_test ok
+[PWRAP] Enable CRC ok
+[PWRAP] _pwrap_InitStaUpd ok
+[PWRAP] PMIF_SPI_PMIF_MPU_CTRL = 0x34
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_0_START = 0x600
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_0_END = 0x67E
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_0_PER = 0xFF3FFFFB
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_1_START = 0x800
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_1_END = 0x13FE
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_1_PER = 0xFFFCFFF8
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_2_START = 0x1400
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_2_END = 0x207E
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_2_PER = 0xFFFCFFF0
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_3_START = 0x2080
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_3_END = 0x26FE
+[PWRAP] PMIF_SPI_PMIF_PMIC_RGN_3_PER = 0xFFFCFF38
+[PWRAP] _pwrap_config_mpu ok
+[PWRAP] start pwrap_read_test
+[PWRAP] rdata=0x5AA5
+[PWRAP] Read Test pass, return_value = 0x0
+[PWRAP] start pwrap_write_test
+[PWRAP] after pwrap_write_test
+[PWRAP] rdata=0xA55A (read back)
+[PWRAP] Write Test pass
+[PWRAP] channel pass
+[PWRAP] REC_CMD0:0x1BEE (The last one adr)
+[PWRAP] REC_WDATA0:0x41 (The last one wdata)
+[PWRAP] REC_CMD1:0x13A6 (The second-last adr)
+[PWRAP] REC_WDATA1:0x31 (The second-last wdata)
+[PWRAP] REC_CMD2:0x13A6 (The third-last adrs)
+[PWRAP] REC_WDATA2:0x34 (The third-last wdata)
+[PWRAP] enable spi debug ok
+[PWRAP] clear record command ok
+
+[PWRAP] PMIC_WRAP_MONITOR_MODE = Logging Mode
+[PWRAP] PMIF_SPI_PMIF_MONITOR_CTRL = 0x5
+[PWRAP] PMIF_SPI_PMIF_MONITOR_TARGET_CHAN_0 = 0x1FBFFF
+[PWRAP] PMIF_SPI_PMIF_MONITOR_TARGET_ADDR_0 = 0x0
+[PWRAP] PMIF_SPI_PMIF_MONITOR_TARGET_WDATA_0 = 0x0
+[PWRAP] init pass, ret=0.
+#T#PWRAP=31
+[TIA] trigger addr setup ok
+[TIA] trigger value setup ok
+[TIA] read back addr setup ok
+[TIA] delay setup ok
+[TIA] lock TIA_AUXADC register ok
+[TIA] TIA init done
+#T#TIA=2
+pmif_spmi_set_lp_mode bringup sleep legacy mode
+#T#SPMI_NO_SRCLKEN_RC=0
+Current RTC time:[2010/1/1 1:1:10]
+#T#I2C=0
+0:0x4000, 1:0x0, 2:0x0, 3:0x102, 4:0x1, STA:0x0, S:0x1, FAB0:0x0, FAB11:0x0
+s4: 0x1
+[PL] spare4 = 0x1
+[PL] segment = 0x1
+DATE_CODE_YY:0, DATE_CODE_WW:0
+[SegCode] Segment Code:0x1, PROJECT_CODE:0x0, FAB_CODE:0x0, RW_STA:0x0, CTL:0x0, DCM:0x7
+#T#DEVINFO=3
+[PMIC]Preloader Start
+[PMIC] CHIP Code = 0x6610
+[PMIC]POWER_HOLD :0x1
+[PMIC]TOP_RST_STATUS[0x152]=0x48
+[PMIC]PONSTS[0xC]=0x0
+[PMIC]POFFSTS[0xE]=0x400
+[PMIC]PG_SDN_STS0[0x16]=0xFFFF
+[PMIC]PG_SDN_STS1[0x18]=0xFF00
+[PMIC]OC_SDN_STS0[0x1A]=0x0
+[PMIC]BUCK_OC_SDN_STATUS[0x1332]=0x0
+[PMIC]BUCK_OC_SDN_EN[0x1346]=0x1FF
+[PMIC]THERMALSTATUS[0x1C]=0x0
+[PMIC]STRUP_CON4[0xA1C]=0x0
+[PMIC]TOP_RST_MISC[0x14C]=0x204
+[PMIC]TOP_CLK_TRIM[0x388]=0x6AC0
+latch VSRAM_PROC11 925000 uV(0x66)
+latch VSRAM_PROC12 850000 uV(0x24)
+latch VPROC11 825000 uV(0x2E)
+latch VPROC12 618750 uV(0x1A)
+latch VSRAM_CORE 825000 uV(0x2E)
+latch VCORE 725000 uV(0x36)
+latch VSRAM_OTHERS 750000 uV(0x3C)
+latch VMODEM 825000 uV(0x2E)
+latch VSRAM_GPU 850000 uV(0x24)
+latch VGPU 850000 uV(0x24)
+[pmic_check_rst] AP Watchdog
+[PMIC]just_rst = 0
+[pwrkey_dbg_status] powerkey:0 count=0(ms) g_pwrkey_release=0
+[pmic_wdt_set] TOP_RST_MISC=0x225
+mtk_subpmic_init (1.0.3_MTK)
+rt9471_enable_autoaicr en = 0
+rt9471_set_wdt time = 0(0x00000000)
+rt9471_set_cv cv = 4400000(0x00000032)
+rt9471_set_vac_ovp vac_ovp = 14000000(0x00000003)
+rt9471_enable_bc12 en = 0
+rt9471_enable_bc12 en = 1
+[PMIC]Init done
+#T#PMIC=14
+pl_chgpump_reset start!
+hl7138_check_devinfo chip_id(10), type(standalone)
+hl7138_get_dp_dm dp(0) dm(0) ret:0
+hl7138_rfc_reset rfc_usb_switch_gpio(155)
+hl7138_rfc_reset done(0)
+pl_chgpump_reset done(0)
+Enter mtk_kpd_gpio_set! 
+SEAN TEST no key
