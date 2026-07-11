@@ -1,0 +1,100 @@
+Hit any key to stop autoboot:  0 
+[?25l[2J[1;1H[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H[7m1. Fastboot USB[0m[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H[7m2. Boot Android[0m[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H[7m3. Enable serial console gadget[0m[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H[7m4. Enable USB mass storage[0m[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H[7m5. Drop to shell[0m[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H[7m6. Reset device[0m[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H[7m5. Drop to shell[0m[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[?25h[2J[1;1H=> ufetch
+[34m[1m                  ......::......                     [0minfinix,x676b
+[34m[1m             ...::::::::::::::::::...                -------------
+[34m[1m          ..::::::::::::::::::::::::::..             Kernel:[0m U-Boot 2025.10-rc5-g9501b4435462-dirty
+[34m[1m        .::::.:::::::::::::::...::::.::::.           Config:[0m mt6789_defconfig
+[34m[1m      .::::::::::::::::::::..::::::::::::::.         Host:[0m Infinix Note 12 Pro (X676B)
+[34m[1m    .::.:::::::::::::::::::[33m=*%#*[34m::::::::::.::.       Uptime:[0m 26 seconds
+[34m[1m   .:::::::::::::::::.....[33m*%%*-[34m:....::::::::::.      IP Address:[0m none
+[34m[1m  .:.:::...:::::::::.:-[33m===##*---==-[34m::::::::::.:.     Commands:[0m 112 (help)
+[34m[1m .::::..::::........[33m-***#****###****-[34m...::::::.:.    Consoles:[0m serial,usbacm (921600 baud)
+[34m[1m ::.:.-[33m+***+=[34m::-[33m=+**#%%%%%%%%%%%%###*= [34m-::...::::.   Features:[0m , EFI
+[34m[1m.:.::-[33m*****###%%%%%%%%%%%%%%%%%%%%%%%%%%#*=[34m:..::::   Relocated:[0m to 0x13feb9000
+[34m[1m.::[33m##[34m:[33m***#%%%%%%#####%%%%%%%####%%%%%####%%%*[34m-.::.   CPU: [0marm (8 cores, 1 in use)
+[34m[1m:.:[33m#%[34m::[33m*%%%%%%%#*****##%%%#*****##%%##*****#%%+[34m.::.  Memory:[0m 8 GiB
+[34m[1m.::[33m**==#%%%%%%%##****#%%%%##****#%%%%#****###%%[34m:..    mmc 0: [0mNo media
+[34m[1m..:[33m#%[34m::[33m*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#%%%%%+ [34m.:.  
+[34m[1m ::[33m##[34m:[33m+**#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%* [34m-.::   
+[34m[1m ..::-[33m#****#%#%%%%%%%%%%%%%%%%%%%%%%%%%%#*=[34m-..::.    
+[34m[1m  ...:=[33m*****=[34m::-[33m=+**###%%%%%%%%###**+=  [34m--:...:::    
+[34m[1m   .::.::--:........::::::--::::::......::::::.      
+[34m[1m    .::.....::::::::::...........:::::::::.::.       
+[34m[1m      .::::::::::::::::::::::::::::::::::::.         
+[34m[1m        .::::.::::::::::::::::::::::.::::.           
+[34m[1m          ..::::::::::::::::::::::::::..             
+[34m[1m             ...::::::::::::::::::...                
+[34m[1m                  ......::......                     
+[0m
+
+=> dm
+dm - Driver model low level access
+
+Usage:
+dm compat        Dump list of drivers with compatibility strings
+dm devres        Dump list of device resources for each device
+dm drivers       Dump list of drivers with uclass and instances
+dm static        Dump list of drivers with static platform data
+dm tree [-s][-e][name]   Dump tree of driver model devices (-s=sort)
+dm uclass [-e][name]     Dump list of instances for each uclass
+=> dm tree
+ Class     Seq    Probed  Driver                Name
+-----------------------------------------------------------
+ root          0  [ + ]   root_driver           root_driver
+ clk           0  [   ]   fixed_clock           |-- clock-32k
+ clk           1  [   ]   fixed_clock           |-- clock-13m
+ clk           2  [ + ]   fixed_clock           |-- clock-26m
+ clk           3  [   ]   fixed_clock           |-- clock-ulposc
+ firmware      0  [   ]   psci                  |-- psci
+ simple_bus    0  [ + ]   simple_bus            |-- soc@0
+ syscon        0  [   ]   syscon                |   |-- syscon@10000000
+ syscon        1  [   ]   syscon                |   |-- syscon@10001000
+ reset         0  [   ]   ti-syscon-reset       |   |   `-- reset-controller
+ syscon        2  [   ]   syscon                |   |-- syscon@1000c000
+ syscon        3  [   ]   syscon                |   |-- syscon@10003000
+ syscon        4  [   ]   syscon                |   |-- syscon@11210000
+ syscon        5  [   ]   syscon                |   |-- syscon@13fbf000
+ syscon        6  [   ]   syscon                |   |-- syscon@14000000
+ syscon        7  [   ]   syscon                |   |-- syscon@1101b000
+ syscon        8  [   ]   syscon                |   |-- syscon@11e02000
+ syscon        9  [   ]   syscon                |   |-- syscon@11eb4000
+ syscon       10  [   ]   syscon                |   |-- syscon@11f01000
+ serial        0  [ + ]   serial_mtk            |   |-- serial@11002000
+ usb_gadget    0  [ + ]   mtk_musb              |   |-- usb0@11200000
+ phy           0  [ + ]   mtk-tphy              |   |-- t-phy@11f40000
+ mmc           0  [   ]   mtk_sd                |   |-- mmc@11240000
+ blk           0  [   ]   mmc_blk               |   |   |-- mmc@11240000.blk
+ bootdev       0  [   ]   mmc_bootdev           |   |   `-- mmc@11240000.bootdev
+ ufs           0  [   ]   mediatek-ufshci       |   |-- ufshci@11270000
+ scsi          0  [   ]   ufs_scsi              |   |   `-- ufs_scsi
+ watchdog      0  [ + ]   mtk_wdt               |   |-- watchdog@10007000
+ button        0  [   ]   button_mtk_kp         |   |-- volume-down
+ button        1  [   ]   button_mtk_kp         |   `-- volume-up
+ video         0  [   ]   simple_video          |-- framebuffer@fe0c8000
+ bootstd       0  [   ]   bootstd_drv           |-- bootstd
+ bootmeth      0  [   ]   bootmeth_extlinux     |   |-- extlinux
+ bootmeth      1  [   ]   bootmeth_efi_mgr      |   |-- efi_mgr
+ bootmeth      2  [   ]   bootmeth_efi          |   |-- efi
+ bootmeth      3  [   ]   vbe_simple            |   `-- vbe_simple
+ efi           0  [   ]   EFI block driver      |-- efi
+ simple_bus    1  [   ]   cpu_bus               `-- cpus
+=> button list
+=> 
+=> ищеьут<INTERRUPT>
+=> n ищ  botmenuotmenu
+Unknown command 'иbootmenu' - try 'help'
+=> иbootmenu          
+Unknown command 'иbootmenu' - try 'help'
+=> ище
+Unknown command 'ище' - try 'help'
+=> botm  otm
+  bootm bootmenu
+=> bootmenu 
+[?25l[2J[1;1H[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H[7m1. Fastboot USB[0m[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[15;3HHit any key to stop autoboot: 2 [15;1H[2K[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H[7m2. Boot Android[0m[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H[7m3. Enable serial console gadget[0m[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H[7m4. Enable USB mass storage[0m[8;7H5. Drop to shell[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H[7m5. Drop to shell[0m[9;7H6. Reset device[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H[7m6. Reset device[0m[10;7H7. Dump clocks[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[1;1H[2K[2;3H*** U-Boot Boot Menu ***[0K[3;1H[2K[15;1H[2K[16;3HPress UP/DOWN to move, ENTER to select, ESC to quit[0K[17;1H[2K[4;7H1. Fastboot USB[5;7H2. Boot Android[6;7H3. Enable serial console gadget[7;7H4. Enable USB mass storage[8;7H5. Drop to shell[9;7H6. Reset device[10;7H[7m7. Dump clocks[0m[11;7H8. Dump environment[12;7H9. Board info[13;7H0. Exit[?25h[2J[1;1H Rate               Usecnt      Name
+------------------------------------------
+ 32000                0        |-- clock-32k
+ 13000000             0        |-- clock-13m
+ 26000000             0        |-- clock-26m
+ 0                    0        |-- clock-ulposc
+Press any key to continue...
+=> 
