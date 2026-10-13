@@ -1,0 +1,348 @@
+diff --git a/arch/arm/dts/mt6789-infinix-x676b.dts b/arch/arm/dts/mt6789-infinix-x676b.dts
+new file mode 100644
+index 00000000..81d0e0a8
+--- /dev/null
++++ b/arch/arm/dts/mt6789-infinix-x676b.dts
+@@ -0,0 +1,209 @@
++/*
++ * SPDX-License-Identifier: (GPL-2.0 OR MIT)
++ */
++
++/dts-v1/;
++#include "mt6789.dtsi"
++#include <dt-bindings/gpio/gpio.h>
++#include <dt-bindings/input/input.h>
++
++/ {
++	model = "Infinix Note 12 Pro (X676B)";
++	chassis-type = "handset";
++	compatible = "infinix,x676b", "mediatek,mt6789";
++
++	#address-cells = <2>;
++	#size-cells = <2>;
++
++	aliases {
++		serial0 = &uart0;
++	};
++
++	chosen {
++		#address-cells = <2>;
++		#size-cells = <2>;
++		ranges;
++
++		framebuffer: framebuffer@fe0c8000 {
++			compatible = "simple-framebuffer";
++			reg = <0 0xfe0c8000 0 0x1f2f000>;
++			width = <1080>;
++			height = <2400>;
++			stride = <((1080 + 16) * 4)>;
++			format = "a8r8g8b8";
++		};
++	};
++
++	memory {
++		device_type = "memory";
++		reg = <0x0 0x40000000 0x1 0x0>;
++	};
++
++	reserved-memory {
++		#address-cells = <2>;
++		#size-cells = <2>;
++
++		wifi_mem: wifi@bf000000 {
++			reg = <0 0xbf000000 0 0x600000>;
++			no-map;
++		};
++
++		emi_mem: consys_emi@7d000000 {
++			reg = <0 0x7d000000 0 0x500000>;
++			no-map;
++		};
++
++		sspm_ap_mem: sspm_ap@9f560000 {
++			reg = <0 0x9f560000 0 0x110000>;
++			no-map;
++		};
++
++		apmdc_mem: ap_md_c_smem@8c000000 {
++			reg = <0 0x8c000000 0 0x16a0000>;
++			no-map;
++		};
++
++		apmdnc_mem: ap_md_nc_smem@8e000000 {
++			reg = <0 0x8e000000 0 0xe00000>;
++			no-map;
++		};
++
++		md_mem: md_mem@e3200000 {
++			reg = <0 0xe3200000 0 0xe00000>;
++			no-map;
++		};
++
++		md4_mem: md_mem4@dc000000 {
++			reg = <0 0xdc000000 0 0x14b0000>;
++			no-map;
++		};
++
++		ccci_mem: ccci_tag@bf9f0000 {
++			reg = <0 0xbf9f0000 0 0x10000>;
++			no-map;
++		};
++
++		scp_mem: scp_share@8f000000 {
++			reg = <0 0x8f000000 0 0x5a0000>;
++			compatible = "shared-dma-pool";
++			no-map;
++		};
++
++		scp_res_mem: scp@bfa00000 {
++			reg = <0 0xbfa00000 0 0x400000>;
++			no-map;
++		};
++
++		dfdmcu_mem: dfdmcu_dump@fd000000 {
++			reg = <0x00 0xfd000000 0x00 0x100000>;
++			no-map;
++		};
++
++		crypto_mem: crypto_hw@48401000 {
++			reg = <0 0x48401000 0 0x1000>;
++			no-map;
++		};
++
++		tee_mem: tee@70000000 {
++			reg = <0 0x70000000 0 0x6000000>;
++			no-map;
++		};
++
++		tee_sec_mem: tee_sec@7de00000 {
++			reg = <0 0x7de00000 0 0x800000>;
++			no-map;
++		};
++
++		mcupm_mem: mcupm@7feb0000 {
++			reg = <0 0x7feb0000 0 0x100000>;
++			no-map;
++		};
++
++		sspm_mem: sspm@9fe70000 {
++			reg = <0 0x9fe70000 0 0x180000>;
++			no-map;
++		};
++
++		bl31_mem: bl31@48200000 {
++			reg = <0 0x48200000 0 0x200000>;
++			no-map;
++		};
++
++		fb_mem: framebuffer@fe0c8000 {
++			reg = <0 0xfe0c8000 0 0x1f2f000>;
++			/* no-map removed so U-Boot can access framebuffer */
++		};
++
++		aee_lk_mem: aee_lk@50700000 {
++			reg = <0 0x50700000 0 0x800000>;
++			no-map;
++		};
++
++		drambuf_mem: pl_drambuf@48500000 {
++			reg = <0 0x48500000 0 0x100000>;
++			no-map;
++		};
++
++		unmap_mem: unmap@7e800000 {
++			reg = <0 0x7e800000 0 0x400000>;
++			no-map;
++		};
++
++		gz_mem: gz@7ec00000 {
++			reg = <0 0x7ec00000 0 0x1200000>;
++			no-map;
++		};
++
++		mbist_mem: emi_mbist@7ffff000 {
++			reg = <0 0x7ffff000 0 0x1000>;
++			no-map;
++		};
++
++		dram1_mem: dram-controller1@3ffff000 {
++			reg = <0x2 0x3ffff000 0 0x1000>;
++			no-map;
++		};
++
++		dram0_mem: dram-controller0@3ffff000 {
++			reg = <0x1 0x3ffff000 0 0x1000>;
++			no-map;
++		};
++	};
++};
++
++&uart0 {
++	status = "okay";
++};
++
++&sdhc2 {
++	status = "okay";
++	bus-width = <4>;
++	max-frequency = <200000000>;
++	cap-sd-highspeed;
++	sd-uhs-sdr12;
++	sd-uhs-sdr25;
++	sd-uhs-sdr50;
++	sd-uhs-sdr104;
++	sd-uhs-ddr50;
++	no-mmc;
++};
++
++&ufshci {
++	compatible = "mediatek,mt8183-ufshci";
++	status = "okay";
++};
++
++&usb {
++	status = "okay";
++
++	dr_mode = "peripheral";
++	maximum-speed = "high-speed";
++
++	/* Fix clock names to match MUSB driver expectations */
++	clocks = <&clk26m>, <&clk26m>, <&clk26m>;
++	clock-names = "usbpll", "usbmcu", "usb";
++};
++
++&u2phy {
++	status = "okay";
++};
+diff --git a/configs/mt6789_infinix_x676b_defconfig b/configs/mt6789_infinix_x676b_defconfig
+new file mode 100644
+index 00000000..79876388
+--- /dev/null
++++ b/configs/mt6789_infinix_x676b_defconfig
+@@ -0,0 +1,127 @@
++CONFIG_ARM=y
++CONFIG_POSITION_INDEPENDENT=y
++CONFIG_ARCH_MEDIATEK=y
++CONFIG_TEXT_BASE=0x50F00000
++CONFIG_SYS_MALLOC_LEN=0x81f000
++CONFIG_NR_DRAM_BANKS=32
++CONFIG_ENV_SIZE=0x2f000
++CONFIG_DM_GPIO=y
++CONFIG_DEFAULT_DEVICE_TREE="mt6789-infinix-x676b"
++CONFIG_DM_RESET=y
++CONFIG_SYS_LOAD_ADDR=0x40000000
++CONFIG_IDENT_STRING=" mt6878-tetris"
++CONFIG_CC_OPTIMIZE_FOR_SPEED=y
++CONFIG_ENV_VARS_UBOOT_CONFIG=y
++CONFIG_STACK_SIZE=0x3000000
++CONFIG_DYNAMIC_SYS_CLK_FREQ=y
++CONFIG_EFI_VARIABLE_NO_STORE=y
++CONFIG_ANDROID_BOOT_IMAGE_IGNORE_BLOB_ADDR=y
++CONFIG_FIT=y
++# CONFIG_EXPO is not set
++CONFIG_SUPPORT_RAW_INITRD=y
++CONFIG_SHOW_BOOT_PROGRESS=y
++CONFIG_OF_STDOUT_VIA_ALIAS=y
++CONFIG_FDT_SIMPLEFB=y
++CONFIG_USE_PREBOOT=y
++CONFIG_DEFAULT_FDT_FILE="mt6789-infinix-x676b"
++CONFIG_CONSOLE_RECORD=y
++CONFIG_SYS_CBSIZE=2048
++CONFIG_SYS_PBSIZE=2052
++CONFIG_SYS_CONSOLE_ENV_OVERWRITE=y
++CONFIG_SYS_CONFIG_NAME="mt6789_infinix_x676b"
++# CONFIG_SYS_DEVICE_NULLDEV is not set
++CONFIG_LOG=y
++CONFIG_LOG_DEFAULT_LEVEL=7
++CONFIG_LOG_MAX_LEVEL=7
++CONFIG_LOGF_FILE=y
++CONFIG_LOGF_LINE=y
++CONFIG_LOGF_FUNC=y
++CONFIG_BOARD_TYPES=y
++# CONFIG_DISPLAY_CPUINFO is not set
++# CONFIG_BOARD_INIT is not set
++CONFIG_CMD_DM=y
++CONFIG_HUSH_PARSER=y
++CONFIG_CMD_UFETCH=y
++CONFIG_CMD_BOOTZ=y
++CONFIG_CMD_BOOTMENU=y
++CONFIG_CMD_ABOOTIMG=y
++# CONFIG_CMD_BIND is not set
++CONFIG_CMD_CLK=y
++CONFIG_CMD_DFU=y
++CONFIG_CMD_GPIO=y
++CONFIG_CMD_GPIO_READ=y
++CONFIG_CMD_MMC=y
++CONFIG_CMD_PART=y
++CONFIG_CMD_USB=y
++CONFIG_CMD_USB_MASS_STORAGE=y
++CONFIG_CMD_UMS_ABORT_KEYED=y
++CONFIG_CMD_BMP=y
++# CONFIG_CMD_CLS is not set
++CONFIG_CMD_TIME=y
++CONFIG_CMD_PAUSE=y
++CONFIG_CMD_BTRFS=y
++CONFIG_CMD_EROFS=y
++CONFIG_CMD_EXT2=y
++CONFIG_CMD_EXT4=y
++CONFIG_CMD_EXT4_WRITE=y
++CONFIG_CMD_FAT=y
++CONFIG_CMD_SQUASHFS=y
++CONFIG_CMD_FS_GENERIC=y
++CONFIG_CMD_FS_UUID=y
++CONFIG_CMD_JFFS2=y
++CONFIG_CMD_ZFS=y
++# CONFIG_DOS_PARTITION is not set
++CONFIG_EFI_PARTITION=y
++CONFIG_OF_EMBED=y
++CONFIG_ENV_OVERWRITE=y
++CONFIG_ENV_RELOC_GD_ENV_ADDR=y
++CONFIG_ENV_USE_DEFAULT_ENV_TEXT_FILE=y
++CONFIG_ENV_DEFAULT_ENV_TEXT_FILE="board/mediatek/mtk-phone.env"
++CONFIG_NO_NET=y
++CONFIG_BUTTON=y
++CONFIG_BUTTON_REMAP_PHONE_KEYS=y
++CONFIG_CMD_BLKMAP=y
++CONFIG_BLKMAP=y
++CONFIG_CLK=y
++CONFIG_CLK_CCF=y
++CONFIG_DFU_RAM=y
++CONFIG_DFU_SCSI=y
++CONFIG_SYS_DFU_DATA_BUF_SIZE=0x80000
++CONFIG_USB_FUNCTION_FASTBOOT=y
++CONFIG_FASTBOOT_BUF_ADDR=0x60000000
++CONFIG_FASTBOOT_BUF_SIZE=0x10000000
++CONFIG_FASTBOOT_FLASH=y
++CONFIG_FASTBOOT_FLASH_BLOCK=y
++CONFIG_FASTBOOT_FLASH_BLOCK_INTERFACE_NAME="scsi"
++CONFIG_FASTBOOT_FLASH_BLOCK_DEVICE_ID=2
++CONFIG_FASTBOOT_OEM_RUN=y
++CONFIG_FASTBOOT_CMD_OEM_CONSOLE=y
++CONFIG_FASTBOOT_OEM_BOARD=y
++CONFIG_GPIO_HOG=y
++CONFIG_MMC_MTK=y
++CONFIG_PHY=y
++CONFIG_PHY_MTK_TPHY=y
++CONFIG_PINCTRL=y
++CONFIG_PINCTRL_MT6878=y
++CONFIG_RESET_TI_SYSCON=y
++CONFIG_SCSI=y
++CONFIG_BAUDRATE=921600
++CONFIG_DEFAULT_ENV_IS_RW=y
++# CONFIG_REQUIRE_SERIAL_CONSOLE is not set
++CONFIG_DM_SERIAL=y
++CONFIG_MTK_SERIAL=y
++CONFIG_USB=y
++CONFIG_USB_MUSB_GADGET=y
++CONFIG_USB_MUSB_PIO_ONLY=y
++CONFIG_USB_MUSB_MT85XX=y
++# CONFIG_DM_USB_GADGET is not set
++CONFIG_USB_GADGET=y
++CONFIG_USB_FUNCTION_ACM=y
++CONFIG_UFS=y
++CONFIG_UFS_MEDIATEK=y
++CONFIG_VIDEO=y
++CONFIG_SYS_WHITE_ON_BLACK=y
++CONFIG_VIDEO_SIMPLE=y
++CONFIG_VIDEO_DT_SIMPLEFB=y
++CONFIG_WDT=y
++CONFIG_WDT_MTK=y

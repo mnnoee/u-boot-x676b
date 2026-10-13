@@ -1,0 +1,213 @@
+diff --git a/arch/arm/dts/mt6789.dtsi b/arch/arm/dts/mt6789.dtsi
+index 7a05158b..c329f104 100644
+--- a/arch/arm/dts/mt6789.dtsi
++++ b/arch/arm/dts/mt6789.dtsi
+@@ -343,13 +343,12 @@
+ 
+ 		usb: usb0@11200000 {
+ 			compatible = "mediatek,mt8518-musb", "mediatek,mtk-musb";
+-			reg = <0 0x11200000 0 0x10000>;
+-			reg-names = "mac", "ippc";
++			reg = <0x11200000 0x10000>;
+ 			interrupts = <GIC_SPI 128 IRQ_TYPE_LEVEL_HIGH 0>;
+ 			interrupt-names = "mc";
+ 			phys = <&u2port0 PHY_TYPE_USB2>;
+ 			clocks = <&clk26m>, <&clk26m>, <&clk26m>;
+-			clock-names = "main", "mcu", "univpll";
++			clock-names = "usbpll", "usbmcu", "usb";
+ 			#address-cells = <2>;
+ 			#size-cells = <2>;
+ 			ranges;
+diff --git a/arch/arm/mach-mediatek/mt6789/init.c b/arch/arm/mach-mediatek/mt6789/init.c
+index 58f1301e..48ae90fb 100644
+--- a/arch/arm/mach-mediatek/mt6789/init.c
++++ b/arch/arm/mach-mediatek/mt6789/init.c
+@@ -34,7 +34,6 @@ int mtk_soc_early_init(void)
+ 	return 0;
+ }
+ 
+-/*
+ void reset_cpu(void)
+ {
+ 	struct udevice *wdt;
+@@ -43,10 +42,10 @@ void reset_cpu(void)
+ 		psci_system_reset();
+ 	} else {
+ 		uclass_first_device(UCLASS_WDT, &wdt);
+-	if (wdt)
+-		wdt_expire_now(wdt, 0);
++		if (wdt)
++			wdt_expire_now(wdt, 0);
+ 	}
+-} */
++}
+ 
+ int print_cpuinfo(void)
+ {
+@@ -158,8 +157,8 @@ static struct mm_region mt6789_mem_map[] = {
+ 	},
+ 	{
+ 		/* Framebuffer Reserved */
+-		.virt = 0xfe0d0000UL,
+-		.phys = 0xfe0d0000UL,
++		.virt = 0xfe0c8000UL,
++		.phys = 0xfe0c8000UL,
+ 		.size = 0x01f2f000UL,
+ 		.attrs = PTE_BLOCK_MEMTYPE(MT_NORMAL_NC) |
+ 		PTE_BLOCK_INNER_SHARE | PTE_BLOCK_PXN | PTE_BLOCK_UXN
+diff --git a/board/mediatek/mtk-phone.env b/board/mediatek/mtk-phone.env
+index 947ea3a0..2e357000 100644
+--- a/board/mediatek/mtk-phone.env
++++ b/board/mediatek/mtk-phone.env
+@@ -1,46 +1,35 @@
+-bootdelay=0
+-bootretry=1
++bootdelay=5
++bootretry=-1
+ stdin=serial,button-kbd
+ stdout=serial,vidconsole
+ stderr=serial,vidconsole
+ 
+-# Fastboot is keen to use the address from kconfig, but we
+-# allocate its buffer at runtime.
+ fastboot=fastboot -l $fastboot_addr_r usb 0
+ 
+-# Set up a block map pointing to our subpartition
+ setup_rootdev=scsi device 2; setenv rootdev scsi 2
+ setup_blkmap=part start ${rootdev} userdata userdata_start; part size ${rootdev} userdata userdata_size; blkmap create root; blkmap map root 0 0x${userdata_size} linear ${rootdev} 0x${userdata_start}
++bootargs="stack_depot_disable=on kasan.stacktrace=off kvm-arm.mode=protected cgroup_disable=pressure cgroup.memory=nokmem console=ttyMT0,921600n1 earlycon=uart8250,mmio32,0x11002000,921600n1 root=/dev/ram loglevel=8 8250.nr_uarts=4 initcall_debug=1 transparent_hugepage=never vmalloc=400M swiotlb=noforce cma=64M firmware_class.path=/vendor/firmware page_owner=on pelt=8 loop.max_part=7 FlashID=Hynix+H9QT1G6DN6X132 mem_index=3 aw8622x_lk_f0_cali=0x0 mtk_printk_ctrl.disable_uart=0 has_battery_removed=1 ramoops.mem_address=0x48090000 ramoops.mem_size=0xe0000 ramoops.pmsg_size=0x10000 ramoops.console_size=0x40000 usb2jtag_mode=0 root=/dev/ram bootopt=64S3,32N2,64N2 log_buf_len=2m sfi=0x00000000 PN=x676b_h891 arm64.nomte tkv=294930432 panic=10 bootconfig"
++kernel_addr_r=0x43000000
++kernel_comp_addr_r=0x58000000
++kernel_comp_size=0x04000000
++ramdisk_addr_r=0x66f00000
++fdt_addr_r=0x48700040
+ preboot=scsi reset; scsi scan; run setup_rootdev; run setup_blkmap
+ 
+-# Shortcut to enable USB serial gadget and disable bootretry
+-serial_gadget=setenv stdin serial,button-kbd,usbacm; setenv stdout serial,vidconsole,usbacm; setenv stderr serial,vidconsole,usbacm; setenv bootretry -1; echo Enabled U-Boot console serial gadget
++# Android boot: load boot.img + vendor_boot.img + dtbo_a at safe addr, set addrs, bootm
++boot_android=scsi read 0x40000000 0x2ca00 0x4000; scsi read 0x42000000 0x30a00 0x4000; scsi read 0x48700000 0x34a00 0x800; abootimg addr 0x40000000 0x42000000; bootm
+ 
+-# bootretry will run this command over and over, if we fail once
+-# then bail out to the boot menu instead (with a pause to read
+-# the error message)
+-bootcmd=bootefi bootmgr; pause; run menucmd
++# Try direct Android boot first, fall back to menu
++bootcmd=run boot_android; run menucmd
+ 
+-# When entering the menu (either from button press or failed boot)
+-# remap bootcmd so it will re-open the menu and we won't get stuck
+-# at the console with no way to type
+ menucmd=setenv bootcmd run menucmd; bootmenu -1
+ 
+-# Pause is used so the output can be read on the display
+-bootmenu_0=Boot=bootefi bootmgr; pause
+-bootmenu_1=Enable serial console gadget=run serial_gadget
+-bootmenu_2=Enable USB mass storage=echo "Press any key to exit UMS mode"; ums 0 blkmap 0
+-bootmenu_3=Enable fastboot mode=run fastboot
+-# Disabling bootretry means we'll just drop the shell
+-bootmenu_4=Drop to shell=setenv bootretry -1
+-bootmenu_5=Reset device=reset
+-bootmenu_6=Dump clocks=clk dump; pause
+-bootmenu_7=Dump environment=printenv; pause
+-bootmenu_8=Board info=bdinfo; pause
+-bootmenu_9=Dump bootargs=fdt print /chosen bootargs; pause
++bootmenu_0=Boot Android (direct)=run boot_android
++bootmenu_1=Boot Android (EFI)=bootefi bootmgr; run menucmd
++bootmenu_2=Enable fastboot mode=run fastboot
++bootmenu_3=Enable USB mass storage=echo "Press any key to exit UMS mode"; ums 0 blkmap 0
++bootmenu_4=Reset device=reset
++bootmenu_5=Shell=setenv bootretry -1; hush
+ 
+-# Allow holding the volume down button while U-Boot loads to enter
+-# the boot menu
+ button_cmd_0_name=Volume Down
+ button_cmd_0=run menucmd
+-
+diff --git a/boot/bootm.c b/boot/bootm.c
+index 4bdca22e..b1676ace 100644
+--- a/boot/bootm.c
++++ b/boot/bootm.c
+@@ -509,6 +509,22 @@ int bootm_find_images(ulong img_addr, const char *conf_ramdisk,
+ 			return 1;
+ 		}
+ 
++		/* Override FDT with fdt_addr_r if it contains a valid DTB */
++		if (!conf_fdt) {
++			const char *fdt_addr_str = env_get("fdt_addr_r");
++			if (fdt_addr_str) {
++				ulong fdt_r = hextoul(fdt_addr_str, NULL);
++				if (fdt_r) {
++					void *fdt_blob = map_sysmem(fdt_r, 0);
++					if (fdt_blob && fdt_check_header(fdt_blob) == 0) {
++						images.ft_addr = map_sysmem(fdt_r, 0);
++						images.ft_len = fdt_totalsize(fdt_blob);
++						printf("   Using fdt_addr_r: 0x%08lx\n", fdt_r);
++					}
++				}
++			}
++		}
++
+ 		/* check if FDT overlaps OS image */
+ 		if (check_overlap("FDT", map_to_sysmem(images.ft_addr),
+ 				  images.ft_len, start, size))
+diff --git a/drivers/usb/musb-new/mt85xx.c b/drivers/usb/musb-new/mt85xx.c
+index 14b28bba..8a1aaec3 100644
+--- a/drivers/usb/musb-new/mt85xx.c
++++ b/drivers/usb/musb-new/mt85xx.c
+@@ -314,13 +314,22 @@ static struct musb_hdrc_config musb_config = {
+ 
+ static int musb_usb_probe(struct udevice *dev)
+ {
+-	struct mtk_musb_glue *glue = dev_get_priv(dev);
+-	struct musb_host_data *host = &glue->mdata;
++	struct mtk_musb_glue *glue;
++	struct musb_host_data *host;
+ 	struct musb_hdrc_platform_data pdata;
+-	void *base = dev_read_addr_ptr(dev);
++	void *base;
+ 	int ret;
+ 
+-	DBG_I("%s():\n", __func__);
++	glue = dev_get_priv(dev);
++	host = &glue->mdata;
++
++	base = dev_read_addr_ptr(dev);
++	if (!base) {
++		/* Fallback: use physical address directly if map_sysmem fails */
++		fdt_addr_t addr = dev_read_addr(dev);
++		if (addr != FDT_ADDR_T_NONE)
++			base = (void *)(uintptr_t)addr;
++	}
+ 
+ #ifdef CONFIG_USB_MUSB_HOST
+ 	struct usb_bus_priv *priv = dev_get_uclass_priv(dev);
+@@ -391,6 +400,28 @@ static int musb_usb_remove(struct udevice *dev)
+ 	return 0;
+ }
+ 
++/*
++ * Board USB init - triggers DM probe of MUSB device so that
++ * musb_register() sets the static 'gadget' variable used by
++ * the old-style usb_gadget_register_driver path.
++ */
++int board_usb_init(int index, enum usb_init_type init)
++{
++	struct udevice *dev;
++	int ret;
++
++	if (init != USB_INIT_DEVICE)
++		return -ENODEV;
++
++	ret = uclass_get_device_by_seq(UCLASS_USB_GADGET_GENERIC, index, &dev);
++	if (ret) {
++		printf("MUSB: board_usb_init: uclass_get_device failed: %d\n", ret);
++		return ret;
++	}
++
++	return 0;
++}
++
+ static const struct mtk_musb_config mt8518_cfg = {
+ 	.config = &musb_config,
+ };
