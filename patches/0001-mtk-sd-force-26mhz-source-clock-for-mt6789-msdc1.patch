@@ -1,0 +1,54 @@
+From: OpenClaude <openclaude@heliog99.local>
+Date: Wed, 6 Aug 2026 08:20:00 +0000
+Subject: [PATCH] mmc: mtk-sd: Force 26MHz source clock for MT6789 MSDC1
+
+MT6789 MSDCPLL is disabled by LK bootloader (CON2[0]=0), but the
+mux msdc30_1_sel still points to msdcpll_d2 (index 4). This results
+in bypass mode where the actual source clock is 26MHz, not the
+expected ~400MHz.
+
+The U-Boot driver reads clk_get_rate() from DT which reports the
+configured MSDCPLL rate, but the PLL is actually off. This causes
+incorrect clock divisor calculation and SD card init failure.
+
+Fix: Override src_clk_freq to 26MHz for MT6789 MSDC1 (base 0x11240000).
+
+Tested-by: Live register dumps via uart_cmd.py
+Diagnostics: docs/AGENTS/mt6789_msdc1_live_diagnostics_2026-08-06.md
+
+Signed-off-by: OpenClaude <openclaude@heliog99.local>
+---
+ drivers/mmc/mtk-sd.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+diff --git a/drivers/mmc/mtk-sd.c b/drivers/mmc/mtk-sd.c
+index 1234567890ab..1234567890ab 100644
+--- a/drivers/mmc/mtk-sd.c
++++ b/drivers/mmc/mtk-sd.c
+@@ -1726,6 +1726,24 @@ static int msdc_drv_probe(struct udevice *dev)
+
+ 	EARLY_W("msdc:probe:before_clk_get_rate");
+ 	host->src_clk_freq = clk_get_rate(&host->src_clk);
++
++	/*
++	 * MT6789 MSDC1 workaround: MSDCPLL is disabled by LK (CON2[0]=0),
++	 * but mux msdc30_1_sel still selects msdcpll_d2 (index 4). In bypass
++	 * mode, the actual source clock is tck_26m_mx9_ck (26 MHz), not the
++	 * MSDCPLL rate reported by DT.
++	 *
++	 * Force src_clk_freq to 26 MHz for MSDC1 (base 0x11240000).
++	 * MSDC0 (eMMC at 0x11230000) is not affected.
++	 *
++	 * Root cause: CLK_CFG_7 (0x10000080) = 0x01000401
++	 *   bits [10:8] = 4 (msdcpll_d2)
++	 *   but MSDCPLL CON2 (0x1000C35C) bit 0 = 0 (PLL off)
++	 * See: docs/AGENTS/mt6789_msdc1_live_diagnostics_2026-08-06.md
++	 */
++	if ((uintptr_t)host->base == 0x11240000) {
++		host->src_clk_freq = 26000000;
++	}
+
+ 	if (host->dev_comp->clk_div_bits == 8)
+ 		cfg->f_min = host->src_clk_freq / (4 * 255);
+--
+2.34.1

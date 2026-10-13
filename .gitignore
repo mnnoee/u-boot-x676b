@@ -1,0 +1,4 @@
+*.img
+!uboot-lk-x676b-v219.img
+*.bin
+!*.txt

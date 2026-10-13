@@ -142,10 +142,11 @@ Preloader → U-Boot (in lk_a/lk_b) → boot.img kernel → Android
   ```
 - **Status**: Kernel tries to run init, fails, exits with SIGILL
 
-### 5. Display (NOT FIXED)
+### 5. Display (FIXED, v187)
 - **Problem**: No display output on screen
 - **Root cause**: simple-framebuffer removed, no DRM driver loaded
-- **Status**: Splash image not visible, display driver not implemented
+- **Fix**: custom `mtk_disp_g99.c` driver (v183/v187) — text renders on screen correctly
+- **Status**: ✅ Working — `drivers/video/mediatek/mtk_disp_g99.c` in `u-boot-mtk-g99`
 
 ---
 
