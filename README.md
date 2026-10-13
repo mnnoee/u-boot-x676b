@@ -25,6 +25,7 @@ The U-Boot source code itself lives in a separate repository.
 - 🖥 USB ACM — консоль U-Boot по USB, без кабеля
 - 💾 UMS / fastboot block по UFS
 - 📺 текст U-Boot на AMOLED
+- 🔘 кнопки Volume Up / Down в меню загрузки
 
 **Не работает / Not working**
 - ❌ SD-карта — текущий блокер
